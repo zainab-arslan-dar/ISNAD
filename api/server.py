@@ -263,3 +263,5 @@ if __name__ == "__main__":
     print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)")
     from http.server import ThreadingHTTPServer
     ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()
+
+app = app

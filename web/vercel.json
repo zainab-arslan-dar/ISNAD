@@ -9,16 +9,8 @@
       "destination": "https://isnad-h8d8.onrender.com/events"
     },
     {
-      "source": "/",
-      "destination": "/web/index.html"
-    },
-    {
       "source": "/siem",
-      "destination": "/web/siem.html"
-    },
-    {
-      "source": "/siem.html",
-      "destination": "/web/siem.html"
+      "destination": "/siem.html"
     }
   ]
 }

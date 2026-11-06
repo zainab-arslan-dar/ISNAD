@@ -1,24 +1,21 @@
-"""ISNAD backend (Python 3). Run: python server.py  ->  http://127.0.0.1:8000
-SQLite database, hash-chained custody ledger, tamper refusal, Isolation Forest scoring,
-CSV and court-report PDF generation, live push to the SIEM page."""
-import sys, os
-
-# Add root directory to sys.path so modules like 'engine' can be found from the api/ folder
-D = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.dirname(D))
-
-import csv, hashlib, io, json, queue, re, sqlite3, threading
+"""ISNAD backend (Python 3) - Vercel Serverless Function Wrapper"""
+import sys, os, csv, hashlib, io, json, queue, re, sqlite3, threading
 from datetime import datetime, timezone
-from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
+from http.server import BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
 from xml.sax.saxutils import escape as xe
+
+# Ensure root directory is in path so 'engine' can be imported
+D = os.path.dirname(os.path.abspath(__file__))
+ROOT_DIR = os.path.dirname(D)
+sys.path.insert(0, ROOT_DIR)
+
 from engine import mitre, enrich, digest, leads, analyze_bytes
 
-D = os.path.dirname(os.path.abspath(__file__))
 # On Vercel, use /tmp for SQLite database since the root filesystem is read-only
 IS_VERCEL = os.environ.get("VERCEL") == "1"
-DB_DIR = os.path.join("/tmp", "data") if IS_VERCEL else os.path.join(D, "data")
-W, DB = os.path.join(D, "web"), os.path.join(DB_DIR, "isnad.db")
+DB_DIR = os.path.join("/tmp", "data") if IS_VERCEL else os.path.join(ROOT_DIR, "data")
+W, DB = os.path.join(ROOT_DIR, "web"), os.path.join(DB_DIR, "isnad.db")
 ENGINE, SV = "ISNAD-PoC 0.3", ["Info", "Low", "Medium", "High", "Critical"]
 lock, subs = threading.Lock(), []
 SCHEMA = """CREATE TABLE IF NOT EXISTS evidence(name TEXT,size INT,mod INT,sha TEXT,scope TEXT,ent REAL,kind TEXT,sc INT,pr TEXT);
@@ -48,7 +45,6 @@ def put(c, s):
     c.executemany("INSERT INTO findings VALUES(?,?,?,?,?,?)", [(f["id"], f["file"], f["sev"], f["t"], f.get("w", ""), f.get("ts")) for f in s["fd"]])
     c.executemany("INSERT INTO iocs VALUES(?,?)", list(s["ioc"].items()))
 
-# ---- evidence vault: stored read-only, re-hashed before every analysis ----
 VAULT = os.path.join(DB_DIR, "evidence")
 def file_sha(p):
     h = hashlib.sha256()
@@ -67,7 +63,6 @@ def vault_check(c): return [r["name"] for r in c.execute("SELECT * FROM vault") 
 def full(st):
     rows, model = enrich(st); st = dict(st); st["leads"] = leads(rows); st["model"] = model; return st
 
-# ---- custody ledger: every entry commits to the previous one (tamper-evident) ----
 def ledger(c, action, detail):
     r = c.execute("SELECT hash FROM ledger ORDER BY n DESC LIMIT 1").fetchone(); prev = r[0] if r else "GENESIS"; ts = now()
     c.execute("INSERT INTO ledger(ts,action,detail,prev,hash) VALUES(?,?,?,?,?)", (ts, action, detail, prev, hashlib.sha256((prev + ts + action + detail).encode()).hexdigest()))
@@ -126,7 +121,7 @@ def pdf_bytes(st, case, exm, led, ok):
         cv.saveState(); cv.setFont("Helvetica", 7); cv.drawString(36, 20, "%s | ISNAD preliminary report: examiner validation required | digest %s" % (case, dg[:16])); cv.drawRightString(559, 20, "Page %d" % doc.page); cv.restoreState()
     o = io.BytesIO(); SimpleDocTemplate(o, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=36, bottomMargin=36, title="ISNAD Report " + case).build(S, onFirstPage=foot, onLaterPages=foot); return o.getvalue()
 
-class handler(BaseHTTPRequestHandler):
+class H(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
     def reply(self, code, body, ct="application/json", extra=None):
         self.send_response(code); self.send_header("Content-Type", ct + ("; charset=utf-8" if ct.startswith("text") or ct == "application/json" else ""))
@@ -137,9 +132,7 @@ class handler(BaseHTTPRequestHandler):
         try: self.reply(200, open(os.path.join(W, f), "rb").read(), "text/html")
         except FileNotFoundError: self.reply(404, b"missing " + f.encode(), "text/plain")
     def do_GET(self):
-        u = urlparse(self.path)
-        q = parse_qs(u.query)
-        p = "/api/" + q["route"][0] if "route" in q else u.path
+        u = urlparse(self.path); q = parse_qs(u.query); p = u.path
         if p == "/": return self.page("index.html")
         if p == "/siem": return self.page("siem.html")
         if p == "/events": return self.stream()
@@ -166,18 +159,16 @@ class handler(BaseHTTPRequestHandler):
         self.reply(200, json.dumps(dict(sha=sha, parsed=bool(res), **res)).encode())
     def do_POST(self):
         u = urlparse(self.path)
-        q = parse_qs(u.query)
-        p = "/api/" + q["route"][0] if "route" in q else u.path
         if u.path == "/api/vault": return self.vault(parse_qs(u.query).get("name", ["file"])[0])
         try: body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         except Exception: return self.reply(400, b'{"error":"bad json"}')
         with lock:
             c = db()
-            if p == "/api/decision":
+            if self.path == "/api/decision":
                 ledger(c, "DECISION", "%s %s -> %s by %s" % (body["fid"], body["file"], body["decision"], body["examiner"]))
                 c.execute("INSERT OR REPLACE INTO decisions VALUES(?,?,?,?,?)", (body["fid"], body["file"], body["decision"], body["examiner"], now()))
                 c.commit(); self.broadcast(load(c)); return self.reply(200, b'{"ok":true}')
-            if p != "/api/state" or not all(k in body for k in ("ev", "tl", "fd", "ioc")):
+            if self.path != "/api/state" or not all(k in body for k in ("ev", "tl", "fd", "ioc")): return self.reply(400, b'{"error":"bad state"}')
             old = {e["name"]: e["sha"] for e in c.execute("SELECT name,sha FROM evidence")}
             bad = sorted({e["name"] for e in body["ev"] if e["name"] in old and old[e["name"]] != e["sha"]})
             bad = bad or vault_check(c)
@@ -210,24 +201,12 @@ class handler(BaseHTTPRequestHandler):
             with lock:
                 if q in subs: subs.remove(q)
 
-# Expose 'handler' variable required by Vercel Python runtime
-# Expose 'handler' variable required by Vercel Python runtime
-handler = H
-
-if __name__ == "__main__":
-    os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
-    print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
-    ThreadingHTTPServer(("127.0.0.1", 8000), handler).serve_forever()
-
-# --- Vercel WSGI Adapter ---
-import io
-
+# --- Vercel WSGI Adapter Entrypoint ---
 def app(environ, start_response):
     path = environ.get('PATH_INFO', '')
     query = environ.get('QUERY_STRING', '')
     if query:
         path += '?' + query
-    
     method = environ.get('REQUEST_METHOD', 'GET')
     content_length = int(environ.get('CONTENT_LENGTH') or 0)
     body = environ['wsgi.input'].read(content_length) if content_length > 0 else b''
@@ -281,5 +260,6 @@ def app(environ, start_response):
 
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
-    print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
+    print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)")
+    from http.server import ThreadingHTTPServer
     ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()

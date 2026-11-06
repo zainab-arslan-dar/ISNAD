@@ -1,0 +1,1232 @@
+2026-11-02T02:03:00Z WS04 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-02T02:28:00Z WS01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-02T02:39:00Z DC01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-02T08:08:00Z WS06 EventID 4624 user=frank proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:08:00Z WS01 EventID 4624 user=ivan proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:14:00Z WS05 EventID 4624 user=erin proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:15:00Z WS02 EventID 4624 user=judy proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:33:00Z WS04 EventID 4624 user=dave proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:41:00Z WS01 EventID 4624 user=alice proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:55:00Z WS07 EventID 4624 user=grace proc=explorer.exe Successful logon LogonType=2
+2026-11-02T08:58:00Z WS03 EventID 4624 user=carol proc=explorer.exe Successful logon LogonType=2
+2026-11-02T09:00:02Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-02T09:05:12Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-02T09:06:24Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-02T09:08:00Z WS02 EventID 4624 user=bob proc=explorer.exe Successful logon LogonType=2
+2026-11-02T09:09:43Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-02T09:12:29Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-02T09:12:59Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T09:14:43Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-02T09:15:10Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-02T09:15:27Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T09:19:55Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-02T09:20:39Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-02T09:22:10Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-02T09:22:40Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T09:23:00Z WS08 EventID 4624 user=heidi proc=explorer.exe Successful logon LogonType=2
+2026-11-02T09:24:38Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T09:25:25Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-02T09:26:17Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-02T09:28:48Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-02T09:28:53Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T09:31:15Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T09:31:40Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-02T09:35:29Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T09:39:07Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-02T09:39:42Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-02T09:40:52Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T09:42:25Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T09:44:58Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T09:47:35Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-02T09:49:56Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-02T09:55:31Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-02T09:57:38Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T09:58:15Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T09:59:58Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T10:01:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-02T10:01:11Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-02T10:02:31Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-02T10:03:16Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T10:03:33Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T10:03:36Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T10:04:36Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T10:04:57Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-02T10:05:19Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-02T10:06:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T10:07:47Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-02T10:08:38Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-02T10:14:42Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T10:14:52Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T10:16:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T10:16:37Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-02T10:16:54Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-02T10:20:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-02T10:21:59Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T10:22:47Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-02T10:24:41Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-02T10:26:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T10:26:18Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-02T10:29:47Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-02T10:31:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T10:34:42Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-02T10:36:23Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T10:36:25Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-02T10:38:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T10:39:59Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T10:40:32Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-02T10:40:57Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T10:41:44Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-02T10:43:54Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-02T10:47:00Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T10:47:16Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-02T10:47:30Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-02T10:48:02Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-02T10:48:56Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T10:51:00Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T10:51:24Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T10:51:33Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-02T10:51:39Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-02T10:55:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-02T10:57:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-02T11:00:32Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-02T11:02:45Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T11:03:35Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-02T11:04:54Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T11:05:46Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-02T11:06:09Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-02T11:06:14Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-02T11:07:23Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T11:07:29Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T11:12:30Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T11:13:00Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-02T11:14:56Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T11:16:00Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-02T11:16:18Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-02T11:20:26Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-02T11:20:29Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T11:21:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-02T11:22:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-02T11:22:50Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-02T11:23:49Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T11:25:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-02T11:25:41Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-02T11:25:47Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-02T11:27:34Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T11:28:20Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-02T11:28:28Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-02T11:28:46Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-02T11:30:21Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-02T11:31:28Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-02T11:32:17Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T11:33:11Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T11:38:45Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-02T11:39:30Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-02T11:40:16Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-02T11:40:24Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-02T11:40:59Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-02T11:43:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-02T11:44:40Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-02T11:46:42Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-02T11:46:55Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-02T11:48:48Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-02T11:55:09Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-02T11:55:59Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-02T11:58:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-02T11:58:32Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-02T12:04:44Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-02T12:04:45Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T12:05:06Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T12:07:36Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-02T12:07:38Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-02T12:07:57Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T12:09:26Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T12:10:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T12:11:57Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T12:11:59Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T12:12:23Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T12:13:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-02T12:17:02Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T12:19:51Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T12:20:53Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T12:21:09Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-02T12:22:19Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-02T12:23:04Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-02T12:24:19Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-02T12:24:33Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T12:24:33Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-02T12:24:44Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-02T12:26:35Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-02T12:27:53Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-02T12:30:14Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-02T12:30:31Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-02T12:32:24Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T12:35:43Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-02T12:37:57Z WS08 EventID 4688 user=heidi proc=chrome.exe Process created
+2026-11-02T12:39:02Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T12:41:18Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-02T12:42:05Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T12:43:10Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T12:43:55Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T12:45:04Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-02T12:46:12Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-02T12:46:41Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T12:46:47Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T12:47:11Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T12:47:39Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T12:51:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-02T12:52:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-02T12:54:43Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-02T12:58:41Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T12:59:30Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T13:00:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-02T13:00:46Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-02T13:03:10Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-02T13:04:51Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-02T13:06:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-02T13:06:05Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T13:08:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T13:08:28Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-02T13:08:50Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T13:08:58Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-02T13:09:05Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-02T13:13:51Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-02T13:18:17Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T13:19:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T13:22:22Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T13:23:20Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-02T13:23:38Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T13:24:50Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-02T13:24:55Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-02T13:25:59Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T13:28:23Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-02T13:28:47Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-02T13:29:45Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-02T13:30:00Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-02T13:31:18Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-02T13:32:40Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T13:33:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-02T13:34:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T13:34:05Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T13:35:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-02T13:35:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T13:36:25Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-02T13:40:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-02T13:40:15Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-02T13:42:46Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-02T13:43:02Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-02T13:44:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T13:46:05Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T13:48:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T13:50:10Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T13:52:29Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-02T13:54:38Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T13:54:49Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-02T13:54:53Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T13:55:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T14:05:37Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-02T14:07:33Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-02T14:10:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-02T14:10:39Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T14:10:50Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-02T14:11:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-02T14:11:39Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-02T14:13:41Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T14:14:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-02T14:15:35Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-02T14:15:37Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-02T14:16:52Z WS04 EventID 4688 user=dave proc=notepad.exe Process created
+2026-11-02T14:17:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T14:20:16Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T14:21:46Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T14:22:03Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T14:23:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-02T14:24:59Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T14:26:01Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-02T14:31:07Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-02T14:31:35Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T14:33:43Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T14:35:49Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-02T14:37:12Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T14:39:28Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T14:43:39Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T14:47:23Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T14:51:46Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-02T14:56:28Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-02T14:58:38Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-02T15:04:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-02T15:04:40Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-02T15:10:19Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-02T15:12:47Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-02T15:14:09Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-02T15:14:09Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-02T15:14:49Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-02T15:15:29Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-02T15:17:55Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-02T15:18:33Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-02T15:19:15Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-02T15:19:47Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T15:20:16Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T15:21:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-02T15:22:56Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-02T15:24:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-02T15:27:53Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T15:28:10Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-02T15:31:04Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-02T15:32:37Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-02T15:36:13Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-02T15:37:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-02T15:37:05Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-02T15:38:53Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T15:41:28Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-02T15:41:32Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-02T15:42:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-02T15:42:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T15:42:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-02T15:42:03Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-02T15:44:41Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T15:46:03Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-02T15:46:05Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-02T15:54:00Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T15:54:02Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-02T15:54:28Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T15:55:36Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-02T15:56:36Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T15:59:33Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-02T16:00:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-02T16:00:47Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T16:01:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-02T16:01:15Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-02T16:02:35Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-02T16:05:03Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-02T16:05:52Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T16:07:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-02T16:09:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-02T16:10:56Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T16:11:36Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-02T16:11:54Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-02T16:13:30Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-02T16:14:03Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-02T16:17:49Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-02T16:18:04Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T16:20:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-02T16:20:44Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-02T16:22:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-02T16:22:05Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-02T16:24:26Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-02T16:26:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-02T16:26:43Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-02T16:27:47Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-02T16:30:22Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-02T16:31:48Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-02T16:33:20Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T16:34:38Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T16:37:12Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T16:39:54Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-02T16:40:57Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-02T16:43:11Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-02T16:43:21Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-02T16:43:32Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T16:46:35Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-02T16:47:34Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-02T16:49:04Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-02T16:51:31Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-02T16:51:49Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-02T16:54:01Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-02T16:56:37Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-02T16:57:49Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-02T16:58:02Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T17:00:52Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T17:04:01Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-02T17:04:12Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-02T17:04:39Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-02T17:05:16Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-02T17:07:32Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-02T17:09:32Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-02T17:09:45Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-02T17:14:50Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-02T17:15:03Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-02T17:16:26Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-02T17:21:18Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-02T17:23:17Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-02T17:24:15Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-02T17:32:40Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-02T17:35:57Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-02T17:37:38Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-02T17:38:25Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-02T17:38:28Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-02T17:39:41Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-03T02:19:00Z WS05 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-03T02:25:00Z WS01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-03T02:40:00Z DC01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-03T08:09:00Z WS03 EventID 4624 user=carol proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:11:00Z WS02 EventID 4624 user=bob proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:18:00Z WS06 EventID 4624 user=frank proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:27:00Z WS07 EventID 4624 user=grace proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:30:00Z WS01 EventID 4624 user=alice proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:48:00Z WS08 EventID 4624 user=heidi proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:53:00Z WS02 EventID 4624 user=judy proc=explorer.exe Successful logon LogonType=2
+2026-11-03T08:56:00Z WS01 EventID 4624 user=ivan proc=explorer.exe Successful logon LogonType=2
+2026-11-03T09:02:02Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T09:04:19Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-03T09:04:28Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T09:05:15Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-03T09:07:05Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T09:07:35Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-03T09:14:00Z WS04 EventID 4624 user=dave proc=explorer.exe Successful logon LogonType=2
+2026-11-03T09:15:02Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T09:15:16Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-03T09:16:07Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T09:17:14Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T09:20:03Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-03T09:21:15Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-03T09:24:14Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-03T09:25:21Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-03T09:25:41Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-03T09:28:01Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T09:30:00Z WS05 EventID 4624 user=erin proc=explorer.exe Successful logon LogonType=2
+2026-11-03T09:31:14Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T09:31:14Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-03T09:31:42Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-03T09:32:34Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-03T09:33:02Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T09:42:06Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-03T09:44:07Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-03T09:44:13Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T09:46:40Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T09:50:20Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-03T09:51:25Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-03T09:51:54Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-03T09:52:48Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T09:53:44Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T09:56:51Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-03T09:58:04Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-03T09:58:59Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-03T09:59:11Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-03T10:00:45Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-03T10:03:14Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-03T10:04:12Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T10:04:28Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-03T10:06:56Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T10:07:07Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T10:07:09Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T10:07:59Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T10:08:00Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T10:08:32Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T10:08:49Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T10:09:15Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T10:09:26Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T10:10:02Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T10:13:07Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T10:13:42Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-03T10:13:51Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-03T10:13:52Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T10:13:54Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T10:16:06Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-03T10:19:22Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T10:19:45Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T10:20:08Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-03T10:20:23Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T10:21:37Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T10:21:58Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T10:22:09Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-03T10:25:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-03T10:25:16Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T10:25:30Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T10:27:32Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-03T10:28:53Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-03T10:29:46Z WS08 EventID 4688 user=heidi proc=chrome.exe Process created
+2026-11-03T10:31:02Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T10:33:03Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-03T10:36:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-03T10:36:04Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-03T10:37:55Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T10:40:13Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T10:41:23Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T10:43:05Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-03T10:53:39Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T10:55:25Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T10:57:21Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-03T10:58:04Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T11:01:12Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T11:03:31Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T11:07:03Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T11:10:35Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T11:12:05Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T11:14:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-03T11:14:04Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-03T11:14:41Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-03T11:14:50Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-03T11:15:09Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-03T11:16:02Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T11:18:54Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-03T11:19:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T11:21:00Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T11:22:28Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-03T11:22:41Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T11:22:44Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-03T11:23:13Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-03T11:24:43Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-03T11:26:57Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-03T11:27:17Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-03T11:28:24Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-03T11:31:40Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-03T11:32:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-03T11:34:51Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-03T11:35:12Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-03T11:39:15Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T11:42:09Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-03T11:48:24Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-03T11:48:27Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-03T11:48:31Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T11:49:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-03T11:52:06Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T11:54:22Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T11:57:01Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T11:57:20Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-03T12:00:57Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-03T12:04:32Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T12:06:44Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-03T12:08:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-03T12:08:13Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T12:11:00Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-03T12:12:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-03T12:22:20Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T12:23:42Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T12:26:50Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-03T12:30:00Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T12:30:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-03T12:31:33Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-03T12:32:42Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-03T12:33:01Z WS08 EventID 4688 user=heidi proc=chrome.exe Process created
+2026-11-03T12:33:18Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T12:33:19Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T12:34:51Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T12:35:58Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-03T12:38:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-03T12:39:33Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-03T12:40:06Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-03T12:41:31Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-03T12:41:36Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-03T12:43:46Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-03T12:44:43Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-03T12:44:50Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-03T12:46:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-03T12:46:26Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-03T12:47:30Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-03T12:48:02Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T12:49:18Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-03T12:49:19Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T12:49:42Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-03T12:49:43Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-03T12:49:46Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T12:51:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-03T12:52:10Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T12:55:13Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T12:56:39Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T12:57:15Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-03T12:58:55Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T12:59:49Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-03T13:00:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-03T13:01:36Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T13:02:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-03T13:02:09Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T13:03:55Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T13:04:32Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T13:05:10Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-03T13:05:33Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-03T13:08:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-03T13:09:05Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T13:09:51Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T13:11:22Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T13:11:29Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T13:17:41Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T13:18:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-03T13:18:48Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T13:18:56Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T13:19:15Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-03T13:23:45Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-03T13:24:21Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T13:24:32Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-03T13:25:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T13:27:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-03T13:27:08Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T13:28:22Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-03T13:31:05Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T13:32:23Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-03T13:35:25Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T13:36:34Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-03T13:39:04Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-03T13:39:38Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-03T13:39:45Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T13:40:19Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-03T13:40:46Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T13:40:50Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T13:43:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-03T13:45:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-03T13:48:50Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T13:49:57Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T13:50:22Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T13:54:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-03T13:54:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-03T13:57:13Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-03T13:57:29Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-03T13:58:12Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-03T13:59:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-03T14:01:51Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T14:02:09Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-03T14:03:23Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T14:04:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-03T14:06:38Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-03T14:06:47Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-03T14:09:59Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T14:10:57Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-03T14:11:48Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T14:13:03Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-03T14:15:16Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-03T14:17:25Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T14:17:47Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-03T14:18:57Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T14:21:00Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T14:21:00Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T14:23:05Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T14:23:13Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T14:25:34Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T14:26:45Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-03T14:29:47Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T14:31:02Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-03T14:31:33Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-03T14:32:13Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-03T14:33:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-03T14:33:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T14:33:44Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T14:34:24Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T14:36:21Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-03T14:37:33Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T14:37:58Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-03T14:38:44Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T14:39:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-03T14:39:36Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-03T14:39:46Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-03T14:40:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-03T14:42:49Z WS08 EventID 4688 user=heidi proc=chrome.exe Process created
+2026-11-03T14:45:42Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T14:47:42Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-03T14:47:52Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-03T14:48:04Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T14:48:21Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T14:50:52Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-03T14:56:36Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T14:57:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-03T14:57:09Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T14:57:37Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-03T14:59:35Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T15:00:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-03T15:00:43Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T15:01:13Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T15:02:53Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T15:04:20Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T15:05:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-03T15:06:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-03T15:08:43Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T15:09:04Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T15:09:46Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-03T15:11:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T15:11:17Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T15:11:32Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T15:11:43Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-03T15:16:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-03T15:16:42Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-03T15:17:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T15:17:08Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-03T15:18:53Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-03T15:19:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-03T15:20:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-03T15:23:04Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-03T15:25:07Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T15:26:15Z WS04 EventID 4688 user=dave proc=notepad.exe Process created
+2026-11-03T15:28:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-03T15:30:56Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-03T15:32:09Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T15:33:39Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-03T15:34:21Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T15:34:56Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T15:36:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-03T15:36:12Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T15:37:59Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T15:39:43Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T15:44:50Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-03T15:44:53Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T15:45:35Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-03T15:45:36Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-03T15:48:56Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T15:52:57Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-03T15:53:13Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-03T15:54:24Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-03T15:55:05Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-03T15:55:21Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-03T15:58:14Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-03T16:01:05Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-03T16:06:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-03T16:10:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-03T16:11:56Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-03T16:12:24Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T16:14:09Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-03T16:15:09Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-03T16:16:40Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-03T16:16:50Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-03T16:18:00Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T16:20:44Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-03T16:22:33Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-03T16:26:02Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-03T16:30:30Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T16:33:40Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-03T16:35:13Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T16:36:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-03T16:37:18Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-03T16:43:40Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T16:43:43Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T16:43:51Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-03T16:44:25Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-03T16:44:34Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-03T16:45:25Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-03T16:45:39Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T16:46:19Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-03T16:46:26Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-03T16:48:13Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-03T16:48:15Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-03T16:48:35Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-03T16:48:40Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-03T16:56:06Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-03T16:57:53Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T16:58:07Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T16:58:53Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-03T16:59:59Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-03T17:00:05Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-03T17:00:15Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T17:03:36Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-03T17:06:26Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-03T17:06:30Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-03T17:07:33Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-03T17:11:02Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-03T17:13:32Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-03T17:15:21Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-03T17:16:01Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-03T17:23:09Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-03T17:24:36Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-03T17:24:43Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-03T17:28:08Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-03T17:29:11Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-03T17:31:46Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-03T17:32:07Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-03T17:33:59Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-03T17:35:03Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T17:36:13Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-03T17:36:17Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-03T17:36:38Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-03T17:38:45Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-03T17:39:51Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-03T17:40:03Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-03T21:20:00Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file0.xlsx
+2026-11-03T21:20:05Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file1.xlsx
+2026-11-03T21:20:10Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file2.xlsx
+2026-11-03T21:20:15Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file3.xlsx
+2026-11-03T21:20:20Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file4.xlsx
+2026-11-03T21:20:25Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file5.xlsx
+2026-11-03T21:20:30Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file6.xlsx
+2026-11-03T21:20:35Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file7.xlsx
+2026-11-03T21:20:40Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file8.xlsx
+2026-11-03T21:20:45Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file9.xlsx
+2026-11-03T21:20:50Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file10.xlsx
+2026-11-03T21:20:55Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file11.xlsx
+2026-11-03T21:21:00Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file12.xlsx
+2026-11-03T21:21:05Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file13.xlsx
+2026-11-03T21:21:10Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file14.xlsx
+2026-11-03T21:21:15Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file15.xlsx
+2026-11-03T21:21:20Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file16.xlsx
+2026-11-03T21:21:25Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file17.xlsx
+2026-11-03T21:21:30Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file18.xlsx
+2026-11-03T21:21:35Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file19.xlsx
+2026-11-03T21:21:40Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file20.xlsx
+2026-11-03T21:21:45Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file21.xlsx
+2026-11-03T21:21:50Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file22.xlsx
+2026-11-03T21:21:55Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file23.xlsx
+2026-11-03T21:22:00Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file24.xlsx
+2026-11-03T21:22:05Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file25.xlsx
+2026-11-03T21:22:10Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file26.xlsx
+2026-11-03T21:22:15Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file27.xlsx
+2026-11-03T21:22:20Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file28.xlsx
+2026-11-03T21:22:25Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file29.xlsx
+2026-11-03T21:22:30Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file30.xlsx
+2026-11-03T21:22:35Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file31.xlsx
+2026-11-03T21:22:40Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file32.xlsx
+2026-11-03T21:22:45Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file33.xlsx
+2026-11-03T21:22:50Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file34.xlsx
+2026-11-03T21:22:55Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file35.xlsx
+2026-11-03T21:23:00Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file36.xlsx
+2026-11-03T21:23:05Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file37.xlsx
+2026-11-03T21:23:10Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file38.xlsx
+2026-11-03T21:23:15Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file39.xlsx
+2026-11-03T21:23:20Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file40.xlsx
+2026-11-03T21:23:25Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file41.xlsx
+2026-11-03T21:23:30Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file42.xlsx
+2026-11-03T21:23:35Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file43.xlsx
+2026-11-03T21:23:40Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file44.xlsx
+2026-11-03T21:23:45Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file45.xlsx
+2026-11-03T21:23:50Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file46.xlsx
+2026-11-03T21:23:55Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file47.xlsx
+2026-11-03T21:24:00Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file48.xlsx
+2026-11-03T21:24:05Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file49.xlsx
+2026-11-03T21:24:10Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file50.xlsx
+2026-11-03T21:24:15Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file51.xlsx
+2026-11-03T21:24:20Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file52.xlsx
+2026-11-03T21:24:25Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file53.xlsx
+2026-11-03T21:24:30Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file54.xlsx
+2026-11-03T21:24:35Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file55.xlsx
+2026-11-03T21:24:40Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file56.xlsx
+2026-11-03T21:24:45Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file57.xlsx
+2026-11-03T21:24:50Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file58.xlsx
+2026-11-03T21:24:55Z WS02 EventID 5145 user=bob proc=System Network share access \\FS01\finance\file59.xlsx
+2026-11-03T21:30:00Z WS02 EventID 4688 user=bob proc=7z.exe Process created cmd="7z a -pS3cret finance.7z \\FS01\finance"
+2026-11-04T01:05:00Z WS05 EventID 4624 user=admin proc=winlogon.exe Successful logon LogonType=10 from 203.0.113.77
+2026-11-04T01:06:00Z WS05 EventID 4688 user=admin proc=powershell.exe Process created cmd="powershell -nop -enc SQBFAFgA"
+2026-11-04T01:07:00Z WS05 EventID 4688 user=admin proc=vssadmin.exe Process created cmd="vssadmin delete shadows /all /quiet"
+2026-11-04T01:08:00Z WS05 EventID 4688 user=admin proc=cipher.exe Process created cmd="cipher /w:C:"
+2026-11-04T01:10:00Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report0.docx.locked
+2026-11-04T01:10:01Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report1.docx.locked
+2026-11-04T01:10:02Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report2.docx.locked
+2026-11-04T01:10:03Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report3.docx.locked
+2026-11-04T01:10:04Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report4.docx.locked
+2026-11-04T01:10:05Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report5.docx.locked
+2026-11-04T01:10:06Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report6.docx.locked
+2026-11-04T01:10:07Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report7.docx.locked
+2026-11-04T01:10:08Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report8.docx.locked
+2026-11-04T01:10:09Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report9.docx.locked
+2026-11-04T01:10:10Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report10.docx.locked
+2026-11-04T01:10:11Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report11.docx.locked
+2026-11-04T01:10:12Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report12.docx.locked
+2026-11-04T01:10:13Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report13.docx.locked
+2026-11-04T01:10:14Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report14.docx.locked
+2026-11-04T01:10:15Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report15.docx.locked
+2026-11-04T01:10:16Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report16.docx.locked
+2026-11-04T01:10:17Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report17.docx.locked
+2026-11-04T01:10:18Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report18.docx.locked
+2026-11-04T01:10:19Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report19.docx.locked
+2026-11-04T01:10:20Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report20.docx.locked
+2026-11-04T01:10:21Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report21.docx.locked
+2026-11-04T01:10:22Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report22.docx.locked
+2026-11-04T01:10:23Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report23.docx.locked
+2026-11-04T01:10:24Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report24.docx.locked
+2026-11-04T01:10:25Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report25.docx.locked
+2026-11-04T01:10:26Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report26.docx.locked
+2026-11-04T01:10:27Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report27.docx.locked
+2026-11-04T01:10:28Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report28.docx.locked
+2026-11-04T01:10:29Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report29.docx.locked
+2026-11-04T01:10:30Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report30.docx.locked
+2026-11-04T01:10:31Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report31.docx.locked
+2026-11-04T01:10:32Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report32.docx.locked
+2026-11-04T01:10:33Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report33.docx.locked
+2026-11-04T01:10:34Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report34.docx.locked
+2026-11-04T01:10:35Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report35.docx.locked
+2026-11-04T01:10:36Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report36.docx.locked
+2026-11-04T01:10:37Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report37.docx.locked
+2026-11-04T01:10:38Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report38.docx.locked
+2026-11-04T01:10:39Z WS05 EventID 4688 user=admin proc=enc.exe FileRename report39.docx.locked
+2026-11-04T01:12:00Z WS05 EventID 4688 user=admin proc=enc.exe README_DECRYPT.txt created
+2026-11-04T02:14:00Z DC01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-04T02:17:00Z WS05 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-04T02:23:00Z MAIL01 EventID 7045 user=SYSTEM proc=services.exe Service installed wuauserv Windows Update (scheduled patching)
+2026-11-04T03:00:00Z WS03 EventID 4688 user=carol proc=procdump.exe Process created cmd="procdump -ma lsass.exe lsass.dmp"
+2026-11-04T03:02:00Z WS03 EventID 4688 user=carol proc=psexec.exe Process created cmd="psexec \\FS01 cmd"
+2026-11-04T03:03:00Z FS01 EventID 4624 user=carol proc=svchost.exe Successful logon LogonType=3 from 10.0.0.15
+2026-11-04T03:03:00Z WS03 EventID 4688 user=carol proc=psexec.exe Process created cmd="psexec \\DC01 cmd"
+2026-11-04T03:04:00Z DC01 EventID 4624 user=carol proc=svchost.exe Successful logon LogonType=3 from 10.0.0.15
+2026-11-04T08:02:00Z WS01 EventID 4624 user=ivan proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:04:00Z WS02 EventID 4624 user=bob proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:32:00Z WS03 EventID 4624 user=carol proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:33:00Z WS05 EventID 4624 user=erin proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:33:00Z WS08 EventID 4624 user=heidi proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:38:00Z WS06 EventID 4624 user=frank proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:41:00Z WS04 EventID 4624 user=dave proc=explorer.exe Successful logon LogonType=2
+2026-11-04T08:57:00Z WS07 EventID 4624 user=grace proc=explorer.exe Successful logon LogonType=2
+2026-11-04T09:01:00Z WS01 EventID 4624 user=alice proc=explorer.exe Successful logon LogonType=2
+2026-11-04T09:04:32Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-04T09:04:37Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-04T09:05:15Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T09:05:51Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T09:05:54Z WS02 EventID 4688 user=bob proc=notepad.exe Process created
+2026-11-04T09:07:00Z WS02 EventID 4624 user=judy proc=explorer.exe Successful logon LogonType=2
+2026-11-04T09:11:47Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T09:12:24Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-04T09:14:28Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T09:15:46Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T09:16:33Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T09:17:17Z WS04 EventID 4688 user=dave proc=excel.exe Process created
+2026-11-04T09:17:26Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T09:18:56Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T09:19:51Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-04T09:20:29Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T09:23:01Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-04T09:23:10Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-04T09:23:38Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-04T09:23:39Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-04T09:25:07Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-04T09:25:12Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T09:25:17Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T09:27:09Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T09:28:57Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T09:29:27Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T09:33:37Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-04T09:34:39Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-04T09:34:50Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T09:35:29Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-04T09:38:38Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T09:39:01Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-04T09:43:25Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T09:43:41Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-04T09:44:19Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T09:44:38Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T09:46:31Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T09:47:40Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T09:48:36Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-04T09:50:28Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-04T09:53:21Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-04T09:55:44Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-04T09:57:10Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-04T09:58:32Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T09:59:14Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T09:59:55Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T10:00:28Z WS02 EventID 4688 user=bob proc=excel.exe Process created
+2026-11-04T10:00:46Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-04T10:02:21Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T10:04:06Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T10:05:42Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T10:07:31Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T10:07:58Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-04T10:08:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-04T10:08:28Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T10:10:30Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-04T10:11:11Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-04T10:12:08Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T10:15:32Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T10:18:59Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-04T10:20:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-04T10:20:26Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T10:20:52Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-04T10:23:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T10:26:39Z WS02 EventID 4688 user=judy proc=winword.exe Process created
+2026-11-04T10:26:59Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T10:28:48Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T10:29:55Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-04T10:32:35Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-04T10:34:05Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T10:34:53Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-04T10:36:53Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T10:38:35Z WS03 EventID 4688 user=carol proc=winword.exe Process created
+2026-11-04T10:39:34Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-04T10:40:25Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-04T10:42:21Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T10:42:27Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T10:44:12Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T10:44:31Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-04T10:45:14Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-04T10:46:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-04T10:48:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-04T10:49:05Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-04T10:51:25Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T10:51:52Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-04T10:53:08Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-04T10:53:35Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-04T10:54:57Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T10:55:55Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-04T10:56:36Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T10:57:37Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T11:00:25Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-04T11:03:03Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-04T11:06:35Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T11:07:10Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-04T11:07:41Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-04T11:10:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-04T11:11:18Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-04T11:14:21Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-04T11:14:27Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T11:14:57Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T11:17:45Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-04T11:19:31Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T11:20:11Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-04T11:21:49Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T11:22:11Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-04T11:25:31Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-04T11:26:38Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-04T11:27:09Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T11:29:39Z WS07 EventID 4688 user=grace proc=teams.exe Process created
+2026-11-04T11:31:17Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-04T11:31:55Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-04T11:32:07Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-04T11:35:49Z WS04 EventID 4688 user=dave proc=notepad.exe Process created
+2026-11-04T11:35:50Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-04T11:37:28Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-04T11:38:11Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-04T11:38:35Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-04T11:39:19Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T11:40:32Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T11:40:52Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-04T11:42:03Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-04T11:45:06Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-04T11:45:20Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T11:46:10Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-04T11:48:11Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T11:48:52Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-04T11:49:47Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-04T11:50:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-04T11:52:07Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T11:55:15Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T11:55:27Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-04T11:55:42Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-04T11:57:52Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T11:57:57Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-04T11:58:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-04T11:58:28Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T11:59:10Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-04T12:01:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-04T12:01:05Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T12:03:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-04T12:05:12Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T12:06:12Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-04T12:07:45Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-04T12:08:33Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T12:10:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-04T12:10:31Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-04T12:11:31Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-04T12:13:36Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T12:14:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-04T12:15:00Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T12:15:17Z WS02 EventID 4688 user=bob proc=chrome.exe Process created
+2026-11-04T12:21:44Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T12:22:23Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-04T12:22:38Z WS02 EventID 4688 user=bob proc=outlook.exe Process created
+2026-11-04T12:23:51Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-04T12:25:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-04T12:25:34Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-04T12:26:20Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T12:27:26Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-04T12:28:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T12:31:42Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-04T12:32:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-04T12:32:32Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T12:32:47Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T12:32:52Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-04T12:34:15Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T12:35:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T12:37:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-04T12:38:27Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T12:40:32Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-04T12:40:37Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T12:42:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-04T12:44:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-04T12:46:19Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T12:47:40Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T12:47:42Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T12:47:42Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-04T12:49:38Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T12:50:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-04T12:51:04Z WS08 EventID 4688 user=heidi proc=outlook.exe Process created
+2026-11-04T12:52:13Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-04T12:54:21Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T12:55:28Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-04T12:58:30Z WS02 EventID 4688 user=bob proc=explorer.exe Process created
+2026-11-04T12:59:26Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-04T12:59:49Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T13:00:59Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T13:01:27Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-04T13:02:59Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T13:03:07Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T13:04:07Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T13:04:59Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T13:06:20Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T13:08:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-04T13:11:21Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-04T13:13:40Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-04T13:14:18Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-04T13:19:17Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T13:21:01Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-04T13:21:40Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T13:24:55Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-04T13:25:38Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T13:26:05Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T13:26:05Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-04T13:27:26Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T13:28:55Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-04T13:31:00Z WS02 EventID 4688 user=judy proc=teams.exe Process created
+2026-11-04T13:36:08Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T13:37:08Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T13:37:33Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T13:39:39Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T13:39:57Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T13:42:23Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-04T13:43:42Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T13:44:17Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T13:44:43Z WS06 EventID 4688 user=frank proc=winword.exe Process created
+2026-11-04T13:45:53Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T13:46:50Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-04T13:47:35Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-04T13:54:58Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T13:55:26Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-04T13:56:11Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T13:59:42Z WS05 EventID 4688 user=erin proc=outlook.exe Process created
+2026-11-04T14:02:11Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-04T14:04:45Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T14:05:50Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-04T14:06:35Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T14:07:58Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-04T14:10:58Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T14:11:02Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T14:12:16Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-04T14:12:40Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T14:12:51Z WS04 EventID 4688 user=dave proc=notepad.exe Process created
+2026-11-04T14:13:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-04T14:13:29Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T14:15:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-04T14:16:19Z WS05 EventID 4688 user=erin proc=teams.exe Process created
+2026-11-04T14:17:40Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T14:19:00Z FS01 EventID 5145 user=carol proc=System Network share access \\FS01\docs
+2026-11-04T14:19:47Z WS01 EventID 4688 user=alice proc=notepad.exe Process created
+2026-11-04T14:21:09Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-04T14:21:18Z WS05 EventID 4688 user=erin proc=excel.exe Process created
+2026-11-04T14:22:31Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T14:23:00Z FS01 EventID 5145 user=judy proc=System Network share access \\FS01\docs
+2026-11-04T14:24:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-04T14:24:00Z FS01 EventID 5145 user=frank proc=System Network share access \\FS01\docs
+2026-11-04T14:25:00Z FS01 EventID 5145 user=ivan proc=System Network share access \\FS01\docs
+2026-11-04T14:25:23Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T14:27:36Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-04T14:31:18Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-04T14:33:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T14:35:00Z FS01 EventID 5145 user=alice proc=System Network share access \\FS01\docs
+2026-11-04T14:36:32Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T14:37:16Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T14:39:48Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T14:42:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-04T14:43:00Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T14:44:43Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-04T14:45:42Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T14:46:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-04T14:46:38Z WS05 EventID 4688 user=erin proc=explorer.exe Process created
+2026-11-04T14:46:41Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T14:49:29Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T14:50:19Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T14:51:24Z WS08 EventID 4688 user=heidi proc=teams.exe Process created
+2026-11-04T14:52:43Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-04T14:58:36Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-04T14:59:36Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T14:59:36Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T15:00:17Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-04T15:00:36Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T15:04:50Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-04T15:05:06Z WS01 EventID 4688 user=alice proc=chrome.exe Process created
+2026-11-04T15:05:15Z WS03 EventID 4688 user=carol proc=notepad.exe Process created
+2026-11-04T15:10:03Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T15:10:26Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-04T15:11:34Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T15:12:08Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T15:12:31Z WS05 EventID 4688 user=erin proc=winword.exe Process created
+2026-11-04T15:12:36Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T15:14:24Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-04T15:18:12Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T15:22:53Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T15:23:32Z WS04 EventID 4688 user=dave proc=explorer.exe Process created
+2026-11-04T15:24:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T15:24:06Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T15:27:06Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-04T15:27:25Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T15:27:37Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-04T15:28:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-04T15:29:12Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T15:31:53Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T15:32:10Z WS02 EventID 4688 user=bob proc=teams.exe Process created
+2026-11-04T15:33:51Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T15:36:27Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-04T15:38:00Z FS01 EventID 5145 user=erin proc=System Network share access \\FS01\docs
+2026-11-04T15:39:11Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-04T15:49:58Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T15:53:51Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T15:58:16Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T15:58:19Z WS06 EventID 4688 user=frank proc=excel.exe Process created
+2026-11-04T15:58:21Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T15:59:02Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-04T16:00:00Z FS01 EventID 5145 user=grace proc=System Network share access \\FS01\docs
+2026-11-04T16:00:15Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-04T16:00:59Z WS01 EventID 4688 user=ivan proc=excel.exe Process created
+2026-11-04T16:01:32Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T16:02:29Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-04T16:03:14Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T16:03:23Z WS01 EventID 4688 user=ivan proc=explorer.exe Process created
+2026-11-04T16:03:45Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T16:05:25Z WS07 EventID 4688 user=grace proc=explorer.exe Process created
+2026-11-04T16:06:00Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T16:06:28Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T16:10:55Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-04T16:11:42Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T16:13:48Z WS03 EventID 4688 user=carol proc=outlook.exe Process created
+2026-11-04T16:13:54Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T16:14:08Z WS01 EventID 4688 user=alice proc=excel.exe Process created
+2026-11-04T16:15:12Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T16:17:27Z WS04 EventID 4688 user=dave proc=chrome.exe Process created
+2026-11-04T16:19:59Z WS03 EventID 4688 user=carol proc=chrome.exe Process created
+2026-11-04T16:20:12Z WS02 EventID 4688 user=judy proc=chrome.exe Process created
+2026-11-04T16:21:12Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-04T16:22:01Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T16:22:20Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T16:22:41Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-04T16:22:51Z WS07 EventID 4688 user=grace proc=excel.exe Process created
+2026-11-04T16:23:10Z WS01 EventID 4688 user=alice proc=winword.exe Process created
+2026-11-04T16:23:11Z WS02 EventID 4688 user=judy proc=explorer.exe Process created
+2026-11-04T16:24:20Z WS02 EventID 4688 user=bob proc=winword.exe Process created
+2026-11-04T16:25:26Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T16:25:59Z WS06 EventID 4688 user=frank proc=chrome.exe Process created
+2026-11-04T16:26:21Z WS02 EventID 4688 user=judy proc=outlook.exe Process created
+2026-11-04T16:27:00Z FS01 EventID 5145 user=bob proc=System Network share access \\FS01\docs
+2026-11-04T16:27:01Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T16:28:51Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T16:29:00Z FS01 EventID 5145 user=dave proc=System Network share access \\FS01\docs
+2026-11-04T16:29:38Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T16:30:32Z WS04 EventID 4688 user=dave proc=winword.exe Process created
+2026-11-04T16:30:38Z WS05 EventID 4688 user=erin proc=notepad.exe Process created
+2026-11-04T16:30:45Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T16:34:24Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T16:36:02Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T16:36:53Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T16:37:15Z WS03 EventID 4688 user=carol proc=teams.exe Process created
+2026-11-04T16:37:48Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T16:39:00Z FS01 EventID 5145 user=heidi proc=System Network share access \\FS01\docs
+2026-11-04T16:42:55Z WS04 EventID 4688 user=dave proc=outlook.exe Process created
+2026-11-04T16:44:34Z WS05 EventID 4688 user=erin proc=chrome.exe Process created
+2026-11-04T16:45:40Z WS08 EventID 4688 user=heidi proc=winword.exe Process created
+2026-11-04T16:47:37Z WS06 EventID 4688 user=frank proc=outlook.exe Process created
+2026-11-04T16:51:49Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T16:53:30Z WS01 EventID 4688 user=ivan proc=outlook.exe Process created
+2026-11-04T16:59:03Z WS01 EventID 4688 user=alice proc=explorer.exe Process created
+2026-11-04T17:00:55Z WS07 EventID 4688 user=grace proc=notepad.exe Process created
+2026-11-04T17:01:20Z WS01 EventID 4688 user=alice proc=outlook.exe Process created
+2026-11-04T17:03:06Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-04T17:04:05Z WS06 EventID 4688 user=frank proc=explorer.exe Process created
+2026-11-04T17:05:57Z WS07 EventID 4688 user=grace proc=chrome.exe Process created
+2026-11-04T17:07:48Z WS03 EventID 4688 user=carol proc=explorer.exe Process created
+2026-11-04T17:09:39Z WS08 EventID 4688 user=heidi proc=excel.exe Process created
+2026-11-04T17:11:41Z WS06 EventID 4688 user=frank proc=teams.exe Process created
+2026-11-04T17:18:02Z WS04 EventID 4688 user=dave proc=teams.exe Process created
+2026-11-04T17:20:12Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T17:20:34Z WS02 EventID 4688 user=judy proc=notepad.exe Process created
+2026-11-04T17:21:44Z WS07 EventID 4688 user=grace proc=winword.exe Process created
+2026-11-04T17:23:11Z WS01 EventID 4688 user=ivan proc=chrome.exe Process created
+2026-11-04T17:28:23Z WS08 EventID 4688 user=heidi proc=notepad.exe Process created
+2026-11-04T17:30:37Z WS01 EventID 4688 user=ivan proc=notepad.exe Process created
+2026-11-04T17:31:20Z WS02 EventID 4688 user=judy proc=excel.exe Process created
+2026-11-04T17:32:00Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T17:32:55Z WS08 EventID 4688 user=heidi proc=explorer.exe Process created
+2026-11-04T17:34:07Z WS01 EventID 4688 user=ivan proc=teams.exe Process created
+2026-11-04T17:34:36Z WS03 EventID 4688 user=carol proc=excel.exe Process created
+2026-11-04T17:34:54Z WS01 EventID 4688 user=alice proc=teams.exe Process created
+2026-11-04T17:35:56Z WS01 EventID 4688 user=ivan proc=winword.exe Process created
+2026-11-04T17:37:00Z WS07 EventID 4688 user=grace proc=outlook.exe Process created
+2026-11-04T17:38:45Z WS06 EventID 4688 user=frank proc=notepad.exe Process created
+2026-11-04T17:39:34Z WS08 EventID 4688 user=heidi proc=winword.exe Process created

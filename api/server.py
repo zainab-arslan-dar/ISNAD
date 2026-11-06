@@ -126,7 +126,7 @@ def pdf_bytes(st, case, exm, led, ok):
         cv.saveState(); cv.setFont("Helvetica", 7); cv.drawString(36, 20, "%s | ISNAD preliminary report: examiner validation required | digest %s" % (case, dg[:16])); cv.drawRightString(559, 20, "Page %d" % doc.page); cv.restoreState()
     o = io.BytesIO(); SimpleDocTemplate(o, pagesize=A4, leftMargin=36, rightMargin=36, topMargin=36, bottomMargin=36, title="ISNAD Report " + case).build(S, onFirstPage=foot, onLaterPages=foot); return o.getvalue()
 
-class H(BaseHTTPRequestHandler):
+class handler(BaseHTTPRequestHandler):
     def log_message(self, *a): pass
     def reply(self, code, body, ct="application/json", extra=None):
         self.send_response(code); self.send_header("Content-Type", ct + ("; charset=utf-8" if ct.startswith("text") or ct == "application/json" else ""))
@@ -137,7 +137,9 @@ class H(BaseHTTPRequestHandler):
         try: self.reply(200, open(os.path.join(W, f), "rb").read(), "text/html")
         except FileNotFoundError: self.reply(404, b"missing " + f.encode(), "text/plain")
     def do_GET(self):
-        u = urlparse(self.path); q = parse_qs(u.query); p = u.path
+        u = urlparse(self.path)
+        q = parse_qs(u.query)
+        p = "/api/" + q["route"][0] if "route" in q else u.path
         if p == "/": return self.page("index.html")
         if p == "/siem": return self.page("siem.html")
         if p == "/events": return self.stream()
@@ -164,16 +166,18 @@ class H(BaseHTTPRequestHandler):
         self.reply(200, json.dumps(dict(sha=sha, parsed=bool(res), **res)).encode())
     def do_POST(self):
         u = urlparse(self.path)
+        q = parse_qs(u.query)
+        p = "/api/" + q["route"][0] if "route" in q else u.path
         if u.path == "/api/vault": return self.vault(parse_qs(u.query).get("name", ["file"])[0])
         try: body = json.loads(self.rfile.read(int(self.headers["Content-Length"])))
         except Exception: return self.reply(400, b'{"error":"bad json"}')
         with lock:
             c = db()
-            if self.path == "/api/decision":
+            if p == "/api/decision":
                 ledger(c, "DECISION", "%s %s -> %s by %s" % (body["fid"], body["file"], body["decision"], body["examiner"]))
                 c.execute("INSERT OR REPLACE INTO decisions VALUES(?,?,?,?,?)", (body["fid"], body["file"], body["decision"], body["examiner"], now()))
                 c.commit(); self.broadcast(load(c)); return self.reply(200, b'{"ok":true}')
-            if self.path != "/api/state" or not all(k in body for k in ("ev", "tl", "fd", "ioc")): return self.reply(400, b'{"error":"bad state"}')
+            if p != "/api/state" or not all(k in body for k in ("ev", "tl", "fd", "ioc")):
             old = {e["name"]: e["sha"] for e in c.execute("SELECT name,sha FROM evidence")}
             bad = sorted({e["name"] for e in body["ev"] if e["name"] in old and old[e["name"]] != e["sha"]})
             bad = bad or vault_check(c)
@@ -213,4 +217,4 @@ handler = H
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
     print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
-    ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()
+    ThreadingHTTPServer(("127.0.0.1", 8000), handler).serve_forever()

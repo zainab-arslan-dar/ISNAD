@@ -207,6 +207,7 @@ class H(BaseHTTPRequestHandler):
                 if q in subs: subs.remove(q)
 
 # Expose 'handler' variable required by Vercel Python runtime
+# Expose 'handler' variable required by Vercel Python runtime
 handler = H
 
 if __name__ == "__main__":

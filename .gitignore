@@ -1,0 +1,8 @@
+.venv/
+data/
+__pycache__/
+samples/*.dd
+samples/*.pcap
+samples/*.img
+samples/*.E01
+samples/*.001

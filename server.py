@@ -197,6 +197,11 @@ class H(BaseHTTPRequestHandler):
                 if q in subs: subs.remove(q)
 
 if __name__ == "__main__":
-    os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
-    print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
-    ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()
+    os.makedirs(os.path.dirname(DB), exist_ok=True)
+    db().close()
+
+    host = os.environ.get("HOST", "127.0.0.1")
+    port = int(os.environ.get("PORT", "8000"))
+
+    print(f"ISNAD running on {host}:{port}")
+    ThreadingHTTPServer((host, port), H).serve_forever()

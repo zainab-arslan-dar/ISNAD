@@ -10,6 +10,6 @@
 | Leads produced (P1/P2/P3/P4) | 8 (2/6/0/0) | - |
 | Reproducible digest (3 re-runs) | identical | identical |
 | Tamper test (hash change detected) | detected | 100% |
-| Run time | 1.17 s | - |
+| Run time | 3.06 s | - |
 
 Caveat: the synthetic case was written by the same team as the rules, so these figures are optimistic. Real-data validation is the next step.

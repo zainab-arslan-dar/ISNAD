@@ -258,10 +258,12 @@ def app(environ, start_response):
         start_response('500 Internal Server Error', [('Content-Type', 'text/plain')])
         return [str(e).encode('utf-8')]
 
+class handler(H):
+    pass
+
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
     print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)")
     from http.server import ThreadingHTTPServer
     ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()
 
-app = app

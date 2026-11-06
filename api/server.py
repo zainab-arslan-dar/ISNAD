@@ -1,7 +1,13 @@
 """ISNAD backend (Python 3). Run: python server.py  ->  http://127.0.0.1:8000
 SQLite database, hash-chained custody ledger, tamper refusal, Isolation Forest scoring,
 CSV and court-report PDF generation, live push to the SIEM page."""
-import csv, hashlib, io, json, os, queue, re, sqlite3, threading
+import sys, os
+
+# Add root directory to sys.path so modules like 'engine' can be found from the api/ folder
+D = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(D))
+
+import csv, hashlib, io, json, queue, re, sqlite3, threading
 from datetime import datetime, timezone
 from http.server import ThreadingHTTPServer, BaseHTTPRequestHandler
 from urllib.parse import urlparse, parse_qs
@@ -9,7 +15,10 @@ from xml.sax.saxutils import escape as xe
 from engine import mitre, enrich, digest, leads, analyze_bytes
 
 D = os.path.dirname(os.path.abspath(__file__))
-W, DB = os.path.join(D, "web"), os.path.join(D, "data", "isnad.db")
+# On Vercel, use /tmp for SQLite database since the root filesystem is read-only
+IS_VERCEL = os.environ.get("VERCEL") == "1"
+DB_DIR = os.path.join("/tmp", "data") if IS_VERCEL else os.path.join(D, "data")
+W, DB = os.path.join(D, "web"), os.path.join(DB_DIR, "isnad.db")
 ENGINE, SV = "ISNAD-PoC 0.3", ["Info", "Low", "Medium", "High", "Critical"]
 lock, subs = threading.Lock(), []
 SCHEMA = """CREATE TABLE IF NOT EXISTS evidence(name TEXT,size INT,mod INT,sha TEXT,scope TEXT,ent REAL,kind TEXT,sc INT,pr TEXT);
@@ -23,6 +32,7 @@ now = lambda: datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%S")
 fmt = lambda ts: datetime.fromtimestamp(ts / 1000, timezone.utc).strftime("%d/%m/%Y %H:%M:%S") if ts else ""
 
 def db():
+    os.makedirs(DB_DIR, exist_ok=True)
     c = sqlite3.connect(DB); c.row_factory = sqlite3.Row; c.executescript(SCHEMA); return c
 
 def load(c):
@@ -39,7 +49,7 @@ def put(c, s):
     c.executemany("INSERT INTO iocs VALUES(?,?)", list(s["ioc"].items()))
 
 # ---- evidence vault: stored read-only, re-hashed before every analysis ----
-VAULT = os.path.join(D, "data", "evidence")
+VAULT = os.path.join(DB_DIR, "evidence")
 def file_sha(p):
     h = hashlib.sha256()
     with open(p, "rb") as f:
@@ -50,7 +60,8 @@ def vault_store(c, name, data):
     new = not c.execute("SELECT 1 FROM vault WHERE sha=?", (sha,)).fetchone()
     if not os.path.exists(p):
         with open(p, "wb") as f: f.write(data)
-        os.chmod(p, 0o444)
+        try: os.chmod(p, 0o444)
+        except Exception: pass
     c.execute("INSERT OR IGNORE INTO vault VALUES(?,?,?,?)", (sha, name, p, len(data))); return sha, new
 def vault_check(c): return [r["name"] for r in c.execute("SELECT * FROM vault") if not os.path.exists(r["path"]) or file_sha(r["path"]) != r["sha"]]
 def full(st):
@@ -94,17 +105,16 @@ def pdf_bytes(st, case, exm, led, ok):
     S = [P("<b>DIGITAL FORENSIC TRIAGE REPORT</b>", ParagraphStyle("t", parent=b, fontSize=18, leading=22, textColor=colors.HexColor("#14365d"))),
          P("ISNAD: explainable AI evidence triage with a verifiable chain of custody"), Spacer(1, 8),
          T(["Field", "Value"], [["Case ID", case], ["Examiner", exm or "[to be completed]"], ["Generated (UTC)", now()], ["Engine / model", ENGINE + "; " + model],
-            ["Results digest (SHA-256)", dg], ["Custody ledger", "%d entries, chain %s" % (len(led), "VERIFIED" if ok else "BROKEN")], ["Status", "PRELIMINARY: decision support only, pending examiner validation"]], [110, 413]),
+             ["Results digest (SHA-256)", dg], ["Custody ledger", "%d entries, chain %s" % (len(led), "VERIFIED" if ok else "BROKEN")], ["Status", "PRELIMINARY: decision support only, pending examiner validation"]], [110, 413]),
          P("1. Scope and summary", h), P("%d evidence item(s) were hashed and analysed, producing %d normalised timeline events and %d findings (Critical %d, High %d, Medium %d, Low %d)." % (len(st["ev"]), len(rows), len(fd), n[4], n[3], n[2], n[1])),
          P("2. Evidence integrity", h), P("Each item was read without modification and hashed with SHA-256 at intake; the hash is recorded in the custody ledger (Appendix A). The system refuses analysis if a previously recorded item is presented with a different hash."),
          T(["Item", "Type", "Size (B)", "SHA-256", "Scope", "Priority"], [[e["name"], e["kind"], e["size"], e["sha"], e["scope"], e["pr"]] for e in st["ev"]], [80, 70, 45, 235, 48, 45]),
          P("3. Methodology", h), P("(a) File-signature identification and extension comparison; (b) Shannon entropy; (c) timestamp normalisation to UTC; (d) rule-based event classification mapped to MITRE ATT&amp;CK; (e) burst, scan and transfer detection; (f) signature carving; (g) indicator extraction; (h) unsupervised anomaly scoring: " + xe(model) + ". Anomaly_Score -1 marks a statistical outlier and 1 a typical event. Every finding records the rule that produced it so it can be reproduced and challenged."),
          P("3A. Ranked investigative leads (examiner review required)", h),
          T(["Lead", "Pri", "Entities", "Window (UTC)", "Events", "ATT&amp;CK", "Why flagged", "Examiner decision"],
-           [[l["id"], l["pri"], ", ".join(l["entities"][:4]), fmt(l["start"]) + " to " + fmt(l["end"]), l["n"], ", ".join(l["techniques"]), "; ".join(l["reasons"]) + "\nRefs: " + ", ".join(l["refs"][:3]), (lambda d: d["decision"].upper() + " by " + d["examiner"] if d else "Awaiting review")(st["dec"].get(l["id"] + "|*lead*"))] for l in LD] or [["-"] * 8], [28, 24, 70, 78, 28, 60, 165, 70]),
-         P("4. Findings with supporting records", h),
-         T(["ID", "Sev", "Finding / basis", "ATT&amp;CK", "Source", "Time (UTC)", "Supporting records", "Examiner decision"],
-           [[f["id"], SV[f["sev"]], f["t"] + ": " + f["w"], mitre(f["t"]), f["file"], fmt(f.get("ts")), support(f), (lambda d: d["decision"].upper() + " by " + d["examiner"] if d else "Awaiting review")(st["dec"].get(f["id"] + "|" + f["file"]))] for f in fd], [26, 34, 150, 52, 52, 50, 104, 55]),
+            [[l["id"], l["pri"], ", ".join(l["entities"][:4]), fmt(l["start"]) + " to " + fmt(l["end"]), l["n"], ", ".join(l["techniques"]), "; ".join(l["reasons"]) + "\nRefs: " + ", ".join(l["refs"][:3]), (lambda d: d["decision"].upper() + " by " + d["examiner"] if d else "Awaiting review")(st["dec"].get(l["id"] + "|*lead*"))] for l in LD] or [["-"] * 8], [28, 24, 70, 78, 28, 60, 165, 70]),
+         P("4. Findings with supporting records", h),  T(["ID", "Sev", "Finding / basis", "ATT&amp;CK", "Source", "Time (UTC)", "Supporting records", "Examiner decision"],
+            [[f["id"], SV[f["sev"]], f["t"] + ": " + f["w"], mitre(f["t"]), f["file"], fmt(f.get("ts")), support(f), (lambda d: d["decision"].upper() + " by " + d["examiner"] if d else "Awaiting review")(st["dec"].get(f["id"] + "|" + f["file"]))] for f in fd], [26, 34, 150, 52, 52, 50, 104, 55]),
          P("5. Anomalous events (model output)", h),
          T(["Time (UTC)", "EventID", "Process", "Count", "Size", "Description", "Priority"], [[fmt(r["t"]["ts"]), r["eid"], r["proc"], r["count"], r["size"], r["t"]["type"] + ": " + r["t"]["detail"][:110], r["pri"]] for r in rows if r["score"] == -1][:60], [62, 38, 52, 30, 30, 240, 71]),
          P("6. Indicators of compromise", h), P(xe("; ".join(k.replace("|", ": ") for k in list(st["ioc"])[:40])) or "None extracted."),
@@ -195,6 +205,9 @@ class H(BaseHTTPRequestHandler):
         finally:
             with lock:
                 if q in subs: subs.remove(q)
+
+# Expose 'handler' variable required by Vercel Python runtime
+handler = H
 
 if __name__ == "__main__":
     os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()

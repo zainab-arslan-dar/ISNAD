@@ -218,3 +218,68 @@ if __name__ == "__main__":
     os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
     print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
     ThreadingHTTPServer(("127.0.0.1", 8000), handler).serve_forever()
+
+# --- Vercel WSGI Adapter ---
+import io
+
+def app(environ, start_response):
+    path = environ.get('PATH_INFO', '')
+    query = environ.get('QUERY_STRING', '')
+    if query:
+        path += '?' + query
+    
+    method = environ.get('REQUEST_METHOD', 'GET')
+    content_length = int(environ.get('CONTENT_LENGTH') or 0)
+    body = environ['wsgi.input'].read(content_length) if content_length > 0 else b''
+    
+    rfile = io.BytesIO(body)
+    wfile = io.BytesIO()
+    
+    class DummyClient:
+        def makefile(self, mode, *args, **kwargs):
+            return rfile if 'r' in mode else wfile
+
+    try:
+        req_handler = H(DummyClient(), ('127.0.0.1', 80), None)
+        req_handler.command = method
+        req_handler.path = path
+        req_handler.request_version = 'HTTP/1.1'
+        req_handler.headers = {}
+        
+        for k, v in environ.items():
+            if k.startswith('HTTP_'):
+                req_handler.headers[k[5:].replace('_', '-').title()] = v
+            elif k in ('CONTENT_TYPE', 'CONTENT_LENGTH'):
+                req_handler.headers[k.replace('_', '-').title()] = v
+
+        if method == 'GET':
+            req_handler.do_GET()
+        elif method == 'POST':
+            req_handler.do_POST()
+        else:
+            req_handler.send_error(405, "Method Not Allowed")
+            
+        output = wfile.getvalue()
+        header_data, response_body = output.split(b'\r\n\r\n', 1) if b'\r\n\r\n' in output else (b'', output)
+        
+        header_lines = header_data.decode('latin1').split('\r\n')
+        status_line = header_lines[0] if header_lines else 'HTTP/1.1 200 OK'
+        parts = status_line.split(' ', 2)
+        status = f"{parts[1]} {parts[2]}" if len(parts) > 2 else "200 OK"
+        
+        headers = []
+        for line in header_lines[1:]:
+            if ':' in line:
+                k, v = line.split(':', 1)
+                headers.append((k.strip(), v.strip()))
+                
+        start_response(status, headers)
+        return [response_body]
+    except Exception as e:
+        start_response('500 Internal Server Error', [('Content-Type', 'text/plain')])
+        return [str(e).encode('utf-8')]
+
+if __name__ == "__main__":
+    os.makedirs(os.path.dirname(DB), exist_ok=True); db().close()
+    print("ISNAD running at http://127.0.0.1:8000  (SIEM: /siem)  database: data/isnad.db  Ctrl+C to stop")
+    ThreadingHTTPServer(("127.0.0.1", 8000), H).serve_forever()

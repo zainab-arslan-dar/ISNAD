@@ -1,6 +1,24 @@
 {
   "rewrites": [
-    { "source": "/api/(.*)", "destination": "/server.py" },
-    { "source": "/(.*)", "destination": "/web/$1" }
+    {
+      "source": "/api/:path*",
+      "destination": "https://isnad-h8d8.onrender.com/api/:path*"
+    },
+    {
+      "source": "/events",
+      "destination": "https://isnad-h8d8.onrender.com/events"
+    },
+    {
+      "source": "/",
+      "destination": "/web/index.html"
+    },
+    {
+      "source": "/siem",
+      "destination": "/web/siem.html"
+    },
+    {
+      "source": "/siem.html",
+      "destination": "/web/siem.html"
+    }
   ]
 }
